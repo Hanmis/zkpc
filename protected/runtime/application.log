@@ -1,0 +1,908 @@
+2012/12/03 14:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cool".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('cool')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('cool')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/cool')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/cool
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/login
+---
+2012/12/03 14:47:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/login
+---
+2012/12/03 14:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cool".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('cool')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('cool')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/cool')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/cool
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/member
+---
+2012/12/03 14:47:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/cool
+---
+2012/12/03 14:47:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/wiki
+---
+2012/12/03 14:48:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 14:48:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cool".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('cool')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('cool')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/cool')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/cool
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/member
+---
+2012/12/03 14:48:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/cool
+---
+2012/12/03 14:48:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 14:49:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/login
+---
+2012/12/03 15:06:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/login
+---
+2012/12/03 15:15:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:16:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:16:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/login
+---
+2012/12/03 15:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:20:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/login
+---
+2012/12/03 15:20:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "share".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('share')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('share')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/share')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/share
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/login
+---
+2012/12/03 15:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/share
+---
+2012/12/03 15:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cool".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('cool')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('cool')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/cool')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/cool
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/member
+---
+2012/12/03 15:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/cool
+---
+2012/12/03 15:20:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/wiki
+---
+2012/12/03 15:23:32 [error] [exception.CException] exception 'CException' with message 'Property "CBreadcrumbs.0" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\wamp\web2\framework\web\CWidgetFactory.php(162): CComponent->__set('0', 'Home')
+#1 D:\wamp\web2\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(SiteController), 'zii.widgets.CBr...', Array)
+#2 D:\wamp\web2\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 D:\wamp\web2\zhpc\themes\classic\views\layouts\main.php(47): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zh...')
+#5 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zh...', Array, true)
+#6 D:\wamp\web2\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('D:\wamp\web2\zh...', Array, true)
+#7 D:\wamp\web2\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#8 D:\wamp\web2\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#9 D:\wamp\web2\framework\web\CBaseController.php(207): COutputProcessor->run()
+#10 D:\wamp\web2\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 D:\wamp\web2\zhpc\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#12 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zh...')
+#13 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zh...', Array, true)
+#14 D:\wamp\web2\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\web2\zh...', Array, true)
+#15 D:\wamp\web2\zhpc\protected\controllers\SiteController.php(32): CController->render('index')
+#16 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#17 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#19 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#21 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#22 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/zhpc/
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/post
+---
+2012/12/03 15:28:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:30:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:30:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:30:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:30:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:30:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:30:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:30:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:36:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:36:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:36:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:36:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:37:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:45:12 [error] [php] Invalid argument supplied for foreach() (D:\wamp\web2\framework\zii\widgets\CBreadcrumbs.php:120)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CBaseController.php(127): require()
+#1 D:\wamp\web2\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#2 D:\wamp\web2\framework\web\widgets\CContentDecorator.php(77): SiteController->renderFile()
+#3 D:\wamp\web2\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate()
+#4 D:\wamp\web2\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#5 D:\wamp\web2\framework\web\CBaseController.php(207): CContentDecorator->run()
+#6 D:\wamp\web2\framework\web\CBaseController.php(301): SiteController->endWidget()
+#7 D:\wamp\web2\zhpc\protected\views\layouts\column1.php(6): SiteController->endContent()
+#8 D:\wamp\web2\framework\web\CBaseController.php(127): require()
+#9 D:\wamp\web2\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#10 D:\wamp\web2\framework\web\CController.php(785): SiteController->renderFile()
+#11 D:\wamp\web2\zhpc\protected\controllers\SiteController.php(32): SiteController->render()
+#12 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#13 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 D:\wamp\web2\framework\web\CController.php(287): SiteController->runAction()
+#15 D:\wamp\web2\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): SiteController->run()
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zhpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zhpc/
+in D:\wamp\web2\zhpc\themes\classic\views\layouts\main.php (46)
+in D:\wamp\web2\zhpc\protected\views\layouts\column1.php (6)
+in D:\wamp\web2\zhpc\protected\controllers\SiteController.php (32)
+2012/12/03 15:45:22 [error] [php] Invalid argument supplied for foreach() (D:\wamp\web2\framework\zii\widgets\CBreadcrumbs.php:120)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CBaseController.php(127): require()
+#1 D:\wamp\web2\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#2 D:\wamp\web2\framework\web\widgets\CContentDecorator.php(77): SiteController->renderFile()
+#3 D:\wamp\web2\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate()
+#4 D:\wamp\web2\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#5 D:\wamp\web2\framework\web\CBaseController.php(207): CContentDecorator->run()
+#6 D:\wamp\web2\framework\web\CBaseController.php(301): SiteController->endWidget()
+#7 D:\wamp\web2\zhpc\protected\views\layouts\column1.php(6): SiteController->endContent()
+#8 D:\wamp\web2\framework\web\CBaseController.php(127): require()
+#9 D:\wamp\web2\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#10 D:\wamp\web2\framework\web\CController.php(785): SiteController->renderFile()
+#11 D:\wamp\web2\zhpc\protected\controllers\SiteController.php(32): SiteController->render()
+#12 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#13 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 D:\wamp\web2\framework\web\CController.php(287): SiteController->runAction()
+#15 D:\wamp\web2\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): SiteController->run()
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zhpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zhpc/
+in D:\wamp\web2\zhpc\themes\classic\views\layouts\main.php (46)
+in D:\wamp\web2\zhpc\protected\views\layouts\column1.php (6)
+in D:\wamp\web2\zhpc\protected\controllers\SiteController.php (32)
+2012/12/03 15:46:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:46:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/register
+---
+2012/12/03 15:49:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:49:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:49:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:49:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:50:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:51:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:53:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:54:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:54:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:54:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/03 15:56:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/04 14:34:57 [error] [php] include(TagCloud.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\wamp\web2\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CWidgetFactory.php(147): import()
+#1 D:\wamp\web2\framework\web\CBaseController.php(147): CWidgetFactory->createWidget()
+#2 D:\wamp\web2\framework\web\CBaseController.php(173): UserController->createWidget()
+#3 D:\wamp\web2\zhpc\themes\classic\views\layouts\column2.php(14): UserController->widget()
+#4 D:\wamp\web2\framework\web\CBaseController.php(127): require()
+#5 D:\wamp\web2\framework\web\CBaseController.php(96): UserController->renderInternal()
+#6 D:\wamp\web2\framework\web\CController.php(785): UserController->renderFile()
+#7 D:\wamp\web2\zhpc\protected\controllers\UserController.php(33): UserController->render()
+#8 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#9 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#11 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#12 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#13 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#14 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\wamp\web2\zhpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zhpc/index.php?r=User/login
+in D:\wamp\web2\zhpc\themes\classic\views\layouts\column2.php (14)
+in D:\wamp\web2\zhpc\protected\controllers\UserController.php (33)
+in D:\wamp\web2\zhpc\index.php (13)
+2012/12/04 14:53:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('User/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=User/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/04 15:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('User/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=User/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/04 15:29:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "share".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('share')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('share')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/share')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/share
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=User/login
+---
+2012/12/04 15:30:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/share
+---
+2012/12/04 15:30:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cool".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('cool')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('cool')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/cool')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/cool
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/member
+---
+2012/12/04 15:30:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/cool
+---
+2012/12/04 15:30:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/wiki
+---
+2012/12/04 15:30:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('User/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=User/register
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=User/login
+---
+2012/12/04 15:30:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=User/login
+---
+2012/12/04 15:30:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('User/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=User/register
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=User/login
+---
+2012/12/04 15:30:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "share".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('share')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('share')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/share')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/share
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=User/register
+---
+2012/12/04 15:30:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/share
+---
+2012/12/04 15:30:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cool".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('cool')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('cool')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/cool')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/cool
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/member
+---
+2012/12/04 15:30:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/cool
+---
+2012/12/04 15:30:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=site/wiki
+---
+2012/12/05 12:38:32 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.记住登录状态" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\web\helpers\CHtml.php(2158): CComponent->__get('???????????????...')
+#1 D:\wamp\web2\framework\web\helpers\CHtml.php(1460): CHtml::resolveValue(Object(LoginForm), '???????????????...')
+#2 D:\wamp\web2\framework\web\widgets\CActiveForm.php(748): CHtml::activeCheckBox(Object(LoginForm), '???????????????...', Array)
+#3 D:\wamp\web2\zhpc\themes\classic\views\User\login.php(34): CActiveForm->checkBox(Object(LoginForm), '???????????????...')
+#4 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zh...')
+#5 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zh...', Array, true)
+#6 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zh...', Array, true)
+#7 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#8 D:\wamp\web2\zhpc\protected\controllers\UserController.php(33): CController->render('login', Array)
+#9 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#10 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('login')
+#14 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('User/login')
+#15 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/zhpc/index.php?r=User/login
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/05 14:22:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('User/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=User/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/05 14:26:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('User/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=User/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/05 14:40:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('User/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=User/register
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=User/login
+---
+2012/12/05 14:42:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('User/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=User/register
+HTTP_REFERER=http://localhost:81/zhpc/
+---
+2012/12/05 14:43:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('User/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=User/register
+HTTP_REFERER=http://localhost:81/zhpc/index.php?r=User/login
+---
+2012/12/05 14:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zhpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zhpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zhpc/
+---
