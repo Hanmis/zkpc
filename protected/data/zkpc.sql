@@ -20,5 +20,5 @@ create table zkpc_user(
 	last_login_at datetime,
 	current_login_ip varchar(64),
 	last_login_ip varchar(64),
-	notes_count integer,
-)
+	notes_count integer
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
