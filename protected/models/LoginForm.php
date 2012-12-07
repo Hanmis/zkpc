@@ -8,25 +8,25 @@
 class LoginForm extends CFormModel
 {
 	public $username;
-	public $password;
+	public $pwd;
 	public $rememberMe;
 
 	private $_identity;
 
 	/**
 	 * Declares the validation rules.
-	 * The rules state that username and password are required,
-	 * and password needs to be authenticated.
+	 * The rules state that username and pwd are required,
+	 * and pwd needs to be authenticated.
 	 */
 	public function rules()
 	{
 		return array(
 			// username and password are required
-			array('username, password', 'required'),
+			array('username, pwd', 'required'),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
 			// password needs to be authenticated
-			array('password', 'authenticate'),
+			array('pwd', 'authenticate'),
 		);
 	}
 
@@ -48,9 +48,9 @@ class LoginForm extends CFormModel
 	{
 		if(!$this->hasErrors())
 		{
-			$this->_identity=new UserIdentity($this->username,$this->password);
+			$this->_identity=new UserIdentity($this->username,$this->pwd);
 			if(!$this->_identity->authenticate())
-				$this->addError('password','用户名或者密码不正确');
+				$this->addError('pwd','用户名或者密码不正确');
 		}
 	}
 
@@ -62,7 +62,7 @@ class LoginForm extends CFormModel
 	{
 		if($this->_identity===null)
 		{
-			$this->_identity=new UserIdentity($this->username,$this->password);
+			$this->_identity=new UserIdentity($this->username,$this->pwd);
 			$this->_identity->authenticate();
 		}
 		if($this->_identity->errorCode===UserIdentity::ERROR_NONE)

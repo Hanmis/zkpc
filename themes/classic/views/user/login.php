@@ -26,8 +26,8 @@ $this->breadcrumbs=array(
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'密码'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
+		<?php echo $form->passwordField($model,'pwd'); ?>
+		<?php echo $form->error($model,'pwd'); ?>
 	</div>
 
 	<div class="row rememberMe">
