@@ -26,8 +26,10 @@
  * @property string $last_login_ip
  * @property integer $notes_count
  */
-class User extends CActiveRecord
+class User extends ZkpcActiveRecord
 {
+    public $repwd;
+    public $verifyCode;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -54,14 +56,22 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, email, name, pwd, pwd_salt', 'required'),
-			array('verified, state, login_count, failed_login_count, notes_count', 'numerical', 'integerOnly'=>true),
+			array('username', 'required', 'message'=>'用户名不能为空'),
+            array('username', 'unique', 'message'=>'此用户名已注册！'),
+            array('email', 'required', 'message'=>'Email不能为空'),
+            array('email', 'unique', 'message'=>'此邮箱已注册'),
+            array('email', 'email', 'message'=>'请输入正确的邮箱'),
+            array('pwd', 'required', 'message'=>'密码不能为空'),
+            array('repwd', 'compare', 'compareAttribute'=>'pwd', 'message'=>'两次输入的密码不一致'),
+            array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(), 'message'=>'验证码不正确'),
+
+            array('verified, state, login_count, failed_login_count, notes_count', 'numerical', 'integerOnly'=>true),
 			array('username, name, current_login_ip, last_login_ip', 'length', 'max'=>64),
 			array('email, avatar_file_name, website, pwd, pwd_salt, signature, persistence_token', 'length', 'max'=>128),
 			array('created_at, updated_at, p_Intro, last_login_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('uid, username, email, name, avatar_file_name, verified, state, website, created_at, updated_at, pwd, pwd_salt, signature, p_Intro, persistence_token, login_count, failed_login_count, last_login_at, current_login_ip, last_login_ip, notes_count', 'safe', 'on'=>'search'),
+			array('uid, username, email, name, avatar_file_name, verified, state, website, created_at, updated_at, pwd, pwd_salt, signature, p_Intro, persistence_token, login_count, failed_login_count, last_login_at, current_login_ip, last_login_ip, notes_count, repwd', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -103,6 +113,7 @@ class User extends CActiveRecord
 			'current_login_ip' => 'Current Login Ip',
 			'last_login_ip' => 'Last Login Ip',
 			'notes_count' => 'Notes Count',
+            'repwd' => 'Repwd',
 		);
 	}
 
@@ -146,7 +157,7 @@ class User extends CActiveRecord
 
 	public function validatePassword($pwd)
 	{
-		return $this->hashPassword($pwd, $this->pwd_salt) === $this->pwd;
+		return $this->hashPassword($pwd, $this->pwd_salt) == $this->pwd;
 	}
 	
 	public function hashPassword($pwd, $pwd_salt)

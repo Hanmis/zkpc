@@ -33,7 +33,14 @@
                 <li><a href="<?php echo Yii::app()->createUrl('site/member'); ?>">会员</a></li>
                 <li><a href="<?php echo Yii::app()->createUrl('site/share'); ?>">代码分享</a></li>
                 <li class="right"><a href="<?php echo Yii::app()->createUrl('user/register'); ?>">注册</a></li>
-                <li class="right"><a href="<?php echo Yii::app()->createUrl('user/login'); ?>">登录</a></li>
+                <li class="right">
+                    <?php if(Yii::app()->user->isGuest):?>
+                        <a href="<?php echo Yii::app()->createUrl('user/login'); ?>">登录</a>
+                    <?php endif;?>
+                    <?php if(!Yii::app()->user->isGuest):?>
+                        <a href="<?php echo Yii::app()->createUrl('#'); ?>"><?php echo Yii::app()->user->name; ?></a>
+                    <?php endif;?>
+                </li>
             </ul>
         </div>
     </div>

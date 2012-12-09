@@ -906,3 +906,895 @@ Stack trace:
 REQUEST_URI=/zhpc/index.php?r=site/post
 HTTP_REFERER=http://localhost:81/zhpc/
 ---
+2012/12/08 06:16:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('register')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/login
+---
+2012/12/08 06:21:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'zkpc'' in D:\wamp\web2\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\wamp\web2\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 D:\wamp\web2\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 D:\wamp\web2\framework\base\CModule.php(388): CDbConnection->init()
+#3 D:\wamp\web2\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 D:\wamp\web2\framework\db\ar\CActiveRecord.php(624): CApplication->getDb()
+#5 D:\wamp\web2\framework\db\ar\CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 D:\wamp\web2\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(User))
+#7 D:\wamp\web2\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('User')
+#8 D:\wamp\web2\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#9 D:\wamp\web2\zkpc\protected\controllers\UserController.php(38): CActiveRecord->__construct()
+#10 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#11 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#15 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#16 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/login
+---
+2012/12/08 06:45:04 [error] [php] Undefined variable: user_type (D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php:12)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(785): UserController->renderFile()
+#1 D:\wamp\web2\zkpc\protected\controllers\UserController.php(40): UserController->render()
+#2 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#3 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#5 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#6 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#7 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#8 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/register
+in D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php (12)
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (40)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 06:46:17 [error] [php] Undefined variable: user_type (D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php:12)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(785): UserController->renderFile()
+#1 D:\wamp\web2\zkpc\protected\controllers\UserController.php(40): UserController->render()
+#2 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#3 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#5 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#6 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#7 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#8 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/register
+in D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php (12)
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (40)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 06:51:14 [error] [exception.CException] exception 'CException' with message 'Property "UserController.user_type" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php(12): CComponent->__get('user_type')
+#1 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#2 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#3 D:\wamp\web2\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\zkpc\protected\controllers\UserController.php(33): CController->render('login', Array)
+#5 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#6 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('login')
+#10 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/login')
+#11 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/zkpc/index.php?r=user/login
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 06:54:55 [error] [exception.CException] exception 'CException' with message 'Property "UserController.user_type" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php(12): CComponent->__get('user_type')
+#1 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#2 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#3 D:\wamp\web2\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\zkpc\protected\controllers\UserController.php(35): CController->render('login', Array)
+#5 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#6 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('login')
+#10 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/login')
+#11 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/zkpc/index.php?r=user/login
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 06:56:15 [error] [exception.CException] exception 'CException' with message 'Property "UserController.user_type" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php(12): CComponent->__get('user_type')
+#1 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#2 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#3 D:\wamp\web2\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\zkpc\protected\controllers\UserController.php(33): CController->render('login', Array)
+#5 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#6 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('login')
+#10 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/login')
+#11 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/zkpc/index.php?r=user/login
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 06:56:16 [error] [exception.CException] exception 'CException' with message 'Property "UserController.user_type" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php(12): CComponent->__get('user_type')
+#1 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#2 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#3 D:\wamp\web2\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\zkpc\protected\controllers\UserController.php(33): CController->render('login', Array)
+#5 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#6 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('login')
+#10 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/login')
+#11 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/zkpc/index.php?r=user/login
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 06:56:17 [error] [exception.CException] exception 'CException' with message 'Property "UserController.user_type" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php(12): CComponent->__get('user_type')
+#1 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#2 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#3 D:\wamp\web2\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\zkpc\protected\controllers\UserController.php(33): CController->render('login', Array)
+#5 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#6 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('login')
+#10 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/login')
+#11 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/zkpc/index.php?r=user/login
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 06:56:17 [error] [exception.CException] exception 'CException' with message 'Property "UserController.user_type" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php(12): CComponent->__get('user_type')
+#1 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#2 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#3 D:\wamp\web2\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\zkpc\protected\controllers\UserController.php(33): CController->render('login', Array)
+#5 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#6 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('login')
+#10 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/login')
+#11 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/zkpc/index.php?r=user/login
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 06:56:17 [error] [exception.CException] exception 'CException' with message 'Property "UserController.user_type" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php(12): CComponent->__get('user_type')
+#1 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#2 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#3 D:\wamp\web2\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\zkpc\protected\controllers\UserController.php(33): CController->render('login', Array)
+#5 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#6 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('login')
+#10 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/login')
+#11 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/zkpc/index.php?r=user/login
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 07:50:55 [error] [exception.CException] exception 'CException' with message 'Property "User.repwd" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('repwd')
+#1 D:\wamp\web2\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('repwd')
+#2 D:\wamp\web2\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(User), 'repwd')
+#3 D:\wamp\web2\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(User), 'repwd', Array)
+#4 D:\wamp\web2\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(User), 'repwd', Array)
+#5 D:\wamp\web2\zkpc\themes\classic\views\user\register.php(43): CActiveForm->textField(Object(User), 'repwd', Array)
+#6 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#7 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#8 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#9 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\wamp\web2\zkpc\protected\controllers\UserController.php(63): CController->render('register', Array)
+#11 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#12 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#16 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#17 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:06:54 [error] [exception.CException] exception 'CException' with message 'Property "User.repwd" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('repwd')
+#1 D:\wamp\web2\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('repwd')
+#2 D:\wamp\web2\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(User), 'repwd')
+#3 D:\wamp\web2\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(User), 'repwd', Array)
+#4 D:\wamp\web2\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(User), 'repwd', Array)
+#5 D:\wamp\web2\zkpc\themes\classic\views\user\register.php(43): CActiveForm->textField(Object(User), 'repwd', Array)
+#6 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#7 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#8 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#9 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\wamp\web2\zkpc\protected\controllers\UserController.php(64): CController->render('register', Array)
+#11 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#12 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#16 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#17 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:10:16 [error] [exception.CException] exception 'CException' with message 'Property "User.repwd" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('repwd')
+#1 D:\wamp\web2\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('repwd')
+#2 D:\wamp\web2\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(User), 'repwd')
+#3 D:\wamp\web2\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(User), 'repwd', Array)
+#4 D:\wamp\web2\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(User), 'repwd', Array)
+#5 D:\wamp\web2\zkpc\themes\classic\views\user\register.php(43): CActiveForm->textField(Object(User), 'repwd', Array)
+#6 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#7 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#8 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#9 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\wamp\web2\zkpc\protected\controllers\UserController.php(64): CController->render('register', Array)
+#11 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#12 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#16 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#17 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:10:20 [error] [exception.CException] exception 'CException' with message 'Property "User.repwd" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('repwd')
+#1 D:\wamp\web2\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('repwd')
+#2 D:\wamp\web2\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(User), 'repwd')
+#3 D:\wamp\web2\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(User), 'repwd', Array)
+#4 D:\wamp\web2\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(User), 'repwd', Array)
+#5 D:\wamp\web2\zkpc\themes\classic\views\user\register.php(43): CActiveForm->textField(Object(User), 'repwd', Array)
+#6 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#7 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#8 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#9 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\wamp\web2\zkpc\protected\controllers\UserController.php(64): CController->render('register', Array)
+#11 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#12 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#16 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#17 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:11:56 [error] [exception.CException] exception 'CException' with message 'Property "User.repwd" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('repwd')
+#1 D:\wamp\web2\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('repwd')
+#2 D:\wamp\web2\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(User), 'repwd')
+#3 D:\wamp\web2\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(User), 'repwd', Array)
+#4 D:\wamp\web2\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(User), 'repwd', Array)
+#5 D:\wamp\web2\zkpc\themes\classic\views\user\register.php(43): CActiveForm->textField(Object(User), 'repwd', Array)
+#6 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#7 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#8 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#9 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\wamp\web2\zkpc\protected\controllers\UserController.php(64): CController->render('register', Array)
+#11 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#12 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#16 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#17 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:12:02 [error] [exception.CException] exception 'CException' with message 'Property "User.repwd" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('repwd')
+#1 D:\wamp\web2\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('repwd')
+#2 D:\wamp\web2\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(User), 'repwd')
+#3 D:\wamp\web2\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(User), 'repwd', Array)
+#4 D:\wamp\web2\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(User), 'repwd', Array)
+#5 D:\wamp\web2\zkpc\themes\classic\views\user\register.php(43): CActiveForm->textField(Object(User), 'repwd', Array)
+#6 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#7 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#8 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#9 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\wamp\web2\zkpc\protected\controllers\UserController.php(64): CController->render('register', Array)
+#11 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#12 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#16 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#17 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:12:49 [error] [php] Trying to get property of non-object (D:\wamp\web2\framework\web\helpers\CHtml.php:2158)
+Stack trace:
+#0 D:\wamp\web2\framework\web\widgets\CActiveForm.php(658): activeTextField()
+#1 D:\wamp\web2\zkpc\themes\classic\views\user\register.php(43): CActiveForm->textField()
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require()
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): UserController->renderInternal()
+#4 D:\wamp\web2\framework\web\CController.php(870): UserController->renderFile()
+#5 D:\wamp\web2\framework\web\CController.php(783): UserController->renderPartial()
+#6 D:\wamp\web2\zkpc\protected\controllers\UserController.php(64): UserController->render()
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#10 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#11 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#12 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#13 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/register
+in D:\wamp\web2\zkpc\themes\classic\views\user\register.php (43)
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (64)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:13:19 [error] [exception.CException] exception 'CException' with message 'Property "User.repwd" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('repwd')
+#1 D:\wamp\web2\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('repwd')
+#2 D:\wamp\web2\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(User), 'repwd')
+#3 D:\wamp\web2\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(User), 'repwd', Array)
+#4 D:\wamp\web2\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(User), 'repwd', Array)
+#5 D:\wamp\web2\zkpc\themes\classic\views\user\register.php(43): CActiveForm->textField(Object(User), 'repwd', Array)
+#6 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#7 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#8 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#9 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\wamp\web2\zkpc\protected\controllers\UserController.php(64): CController->render('register', Array)
+#11 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#12 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#16 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#17 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:26:03 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:28:09 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:28:18 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:29:25 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:29:30 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:29:32 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:29:32 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:29:32 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:29:53 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:29:56 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:34:01 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:34:50 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:34:56 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:35:09 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:35:09 [error] [exception.CException] exception 'CException' with message 'Property "User.repwd" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('repwd')
+#1 D:\wamp\web2\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('repwd')
+#2 D:\wamp\web2\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(User), 'repwd')
+#3 D:\wamp\web2\framework\web\helpers\CHtml.php(1351): CHtml::activeInputField('password', Object(User), 'repwd', Array)
+#4 D:\wamp\web2\framework\web\widgets\CActiveForm.php(688): CHtml::activePasswordField(Object(User), 'repwd', Array)
+#5 D:\wamp\web2\zkpc\themes\classic\views\user\register.php(43): CActiveForm->passwordField(Object(User), 'repwd', Array)
+#6 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#7 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#8 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#9 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\wamp\web2\zkpc\protected\controllers\UserController.php(64): CController->render('register', Array)
+#11 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#12 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#16 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#17 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:35:19 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:36:07 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:37:00 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:37:22 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:37:36 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (59)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 08:56:08 [error] [exception.CException] exception 'CException' with message 'Property "User.verifyCode" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('verifyCode')
+#1 D:\wamp\web2\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('verifyCode')
+#2 D:\wamp\web2\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(User), 'verifyCode')
+#3 D:\wamp\web2\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(User), 'verifyCode', Array)
+#4 D:\wamp\web2\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(User), 'verifyCode', Array)
+#5 D:\wamp\web2\zkpc\themes\classic\views\user\register.php(52): CActiveForm->textField(Object(User), 'verifyCode')
+#6 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#7 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#8 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#9 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 D:\wamp\web2\zkpc\protected\controllers\UserController.php(65): CController->render('register', Array)
+#11 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#12 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#16 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#17 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/login
+---
+2012/12/08 08:56:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/captcha')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=user/captcha&v=50c300c65ee2d
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:56:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/captcha')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=user/captcha&refresh=1&_=1354957002309
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:56:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/captcha')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=user/captcha&refresh=1&_=1354957003587
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:56:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/captcha')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=user/captcha&refresh=1&_=1354957005878
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:58:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/captcha')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=user/captcha&v=50c3011caef7b
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:58:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/captcha')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=user/captcha&v=50c3011caef7b
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:58:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/captcha')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=user/captcha&v=50c30137a825f
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 08:58:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/captcha')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=user/captcha&v=50c30137a825f
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 09:32:14 [error] [exception.CException] exception 'CException' with message 'Property "User.update_at" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(160): CComponent->__set('update_at', Object(CDbExpression))
+#1 D:\wamp\web2\zkpc\protected\models\ZkpcActiveRecord.php(16): CActiveRecord->__set('update_at', Object(CDbExpression))
+#2 D:\wamp\web2\framework\base\CModel.php(155): ZkpcActiveRecord->beforeValidate()
+#3 D:\wamp\web2\framework\db\ar\CActiveRecord.php(795): CModel->validate(NULL)
+#4 D:\wamp\web2\zkpc\protected\controllers\UserController.php(79): CActiveRecord->save()
+#5 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#6 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#10 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#11 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/08 09:36:54 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (76)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 09:37:30 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (76)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 09:38:50 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (76)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 09:39:28 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.pwd" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\zkpc\protected\components\UserIdentity.php(25): CComponent->__get('pwd')
+#1 D:\wamp\web2\zkpc\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 D:\wamp\web2\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('pwd', Array)
+#3 D:\wamp\web2\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'pwd')
+#4 D:\wamp\web2\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#5 D:\wamp\web2\zkpc\protected\controllers\UserController.php(55): CModel->validate()
+#6 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#7 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('login')
+#11 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/login')
+#12 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/zkpc/index.php?r=user/login
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/login
+---
+2012/12/08 09:54:02 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (78)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 09:57:33 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.name" is read only.' in D:\wamp\web2\framework\base\CComponent.php:171
+Stack trace:
+#0 D:\wamp\web2\zkpc\protected\components\UserIdentity.php(30): CComponent->__set('name', 'hanmis')
+#1 D:\wamp\web2\zkpc\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 D:\wamp\web2\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('pwd', Array)
+#3 D:\wamp\web2\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'pwd')
+#4 D:\wamp\web2\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#5 D:\wamp\web2\zkpc\protected\controllers\UserController.php(55): CModel->validate()
+#6 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#7 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('login')
+#11 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/login')
+#12 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/zkpc/index.php?r=user/login
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/login
+---
+2012/12/08 09:58:47 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (77)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:00:18 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:00:23 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:00:23 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:00:26 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:00:30 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:00:37 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:00:41 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:00:44 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:00:51 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:01:00 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:01:03 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:01:09 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (77)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:01:09 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:01:21 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:01:24 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (77)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:01:24 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:04:32 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:04:34 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:04:40 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:04:42 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:04:57 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (77)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:05:11 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (71)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/08 10:06:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "share".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('share')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('share')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/share')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/share
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/login
+---
+2012/12/08 10:06:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/share
+---
+2012/12/08 10:06:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cool".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('cool')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('cool')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/cool')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/cool
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/member
+---
+2012/12/08 10:06:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/cool
+---
+2012/12/08 10:06:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/wiki
+---
+2012/12/08 10:10:39 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('password')
+#1 D:\wamp\web2\framework\validators\CCompareValidator.php(91): CActiveRecord->__get('password')
+#2 D:\wamp\web2\framework\validators\CValidator.php(214): CCompareValidator->validateAttribute(Object(User), 'repwd')
+#3 D:\wamp\web2\framework\base\CModel.php(158): CValidator->validate(Object(User), NULL)
+#4 D:\wamp\web2\framework\db\ar\CActiveRecord.php(795): CModel->validate(NULL)
+#5 D:\wamp\web2\zkpc\protected\controllers\UserController.php(79): CActiveRecord->save()
+#6 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#7 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('register')
+#11 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/register')
+#12 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/zkpc/index.php?r=user/register
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/09 14:17:03 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (76)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/09 14:17:09 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (70)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/09 14:17:12 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (70)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/09 14:17:19 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (76)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/09 14:17:29 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (76)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/09 14:17:29 [error] [php] Undefined variable: model (D:\wamp\web2\zkpc\themes\classic\views\user\login.php:21)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(870): UserController->renderFile()
+#1 D:\wamp\web2\framework\web\CController.php(783): UserController->renderPartial()
+#2 D:\wamp\web2\zkpc\protected\controllers\UserController.php(82): UserController->render()
+#3 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#4 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#6 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#8 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/register
+in D:\wamp\web2\zkpc\themes\classic\views\user\login.php (21)
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (82)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/09 14:17:29 [warning] [application] Failed to set unsafe attribute "repwd" of "User".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (70)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/09 14:19:25 [error] [php] Undefined variable: model (D:\wamp\web2\zkpc\themes\classic\views\user\login.php:21)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(870): UserController->renderFile()
+#1 D:\wamp\web2\framework\web\CController.php(783): UserController->renderPartial()
+#2 D:\wamp\web2\zkpc\protected\controllers\UserController.php(82): UserController->render()
+#3 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#4 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#6 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#8 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/register
+in D:\wamp\web2\zkpc\themes\classic\views\user\login.php (21)
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (82)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/09 14:23:40 [error] [php] Undefined variable: model (D:\wamp\web2\zkpc\themes\classic\views\user\login.php:21)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(870): UserController->renderFile()
+#1 D:\wamp\web2\framework\web\CController.php(783): UserController->renderPartial()
+#2 D:\wamp\web2\zkpc\protected\controllers\UserController.php(82): UserController->render()
+#3 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#4 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#6 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#8 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/register
+in D:\wamp\web2\zkpc\themes\classic\views\user\login.php (21)
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (82)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/09 14:24:44 [error] [php] Undefined variable: model (D:\wamp\web2\zkpc\themes\classic\views\user\login.php:21)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(870): UserController->renderFile()
+#1 D:\wamp\web2\framework\web\CController.php(783): UserController->renderPartial()
+#2 D:\wamp\web2\zkpc\protected\controllers\UserController.php(82): UserController->render()
+#3 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#4 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#6 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#8 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/register
+in D:\wamp\web2\zkpc\themes\classic\views\user\login.php (21)
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (82)
+in D:\wamp\web2\zkpc\index.php (13)

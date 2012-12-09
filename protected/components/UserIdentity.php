@@ -16,18 +16,17 @@ class UserIdentity extends CUserIdentity
 	 * @return boolean whether authentication succeeds.
 	 */
 	private $_id;
-	
+
 	public function authenticate()
 	{
 		$user = User::model()->find('LOWER(username)=?', array(strtolower($this->username)));
 		if (!isset($user->username))
 			$this->errorCode = self::ERROR_USERNAME_INVALID;
-		else if (!$user->validatePassword($this->pwd))
+		else if (!$user->validatePassword($this->password))
 			$this->errorCode = self::ERROR_PASSWORD_INVALID;
 		else {
 			$this->_id = $user->uid;
 			$this->username = $user->username;
-			$this->name = $user->name;
 			$this->errorCode=self::ERROR_NONE;
 			// $this->setState('username', $user->username);
 			// $this->setState('name', $user->name);		

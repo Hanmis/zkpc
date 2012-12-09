@@ -5,7 +5,7 @@
 
 $this->pageTitle=Yii::app()->name . ' - Login';
 $this->breadcrumbs=array(
-	'Login',
+	'登录',
 );
 ?>
 <h1 class="title">登录</h1>
@@ -17,7 +17,6 @@ $this->breadcrumbs=array(
 		'validateOnSubmit'=>true,
 	),
 )); ?>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'用户名'); ?>
 		<?php echo $form->textField($model,'username'); ?>
