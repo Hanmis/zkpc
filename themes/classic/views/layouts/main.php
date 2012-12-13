@@ -41,6 +41,7 @@
                         <a href="<?php echo Yii::app()->createUrl('#'); ?>"><?php echo Yii::app()->user->name; ?></a>
                     <?php endif;?>
                 </li>
+                <li class="right"><a href="<?php echo Yii::app()->createUrl('user/logout')?>">注销</a></li>
             </ul>
         </div>
     </div>
