@@ -1798,3 +1798,14 @@ REQUEST_URI=/zkpc/index.php?r=user/register
 in D:\wamp\web2\zkpc\themes\classic\views\user\login.php (21)
 in D:\wamp\web2\zkpc\protected\controllers\UserController.php (82)
 in D:\wamp\web2\zkpc\index.php (13)
+2012/12/15 13:36:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zkpc/index.php
+---

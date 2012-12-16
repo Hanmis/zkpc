@@ -17,9 +17,17 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/index.css "/>
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/user.css "/>
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    <script type="text/javascript">
+        function getUserMenu(){
+            document.getElementById("dropdown-menu").style.display="inline";
+        }
+        function moverUserMenu(){
+            document.getElementById("dropdown-menu").style.display="none";
+        }
+    </script>
 </head>
 
-<body>
+<body onclick="moverUserMenu();">
 
 <div>
     <!--头部导航开始-->
@@ -38,10 +46,16 @@
                         <a href="<?php echo Yii::app()->createUrl('user/login'); ?>">登录</a>
                     <?php endif;?>
                     <?php if(!Yii::app()->user->isGuest):?>
-                        <a href="<?php echo Yii::app()->createUrl('#'); ?>"><?php echo Yii::app()->user->name; ?></a>
+                    <?php echo CHtml::link(Yii::app()->user->name, '#',array(
+                        'onmouseover'=>'getUserMenu();',
+                    ))?>
+                    <ul id="dropdown-menu">
+                        <li><a>我的主页</a></li>
+                        <li><a>记事本</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('user/logout')?>">注销</a></li>
+                    </ul>
                     <?php endif;?>
                 </li>
-                <li class="right"><a href="<?php echo Yii::app()->createUrl('user/logout')?>">注销</a></li>
             </ul>
         </div>
     </div>
