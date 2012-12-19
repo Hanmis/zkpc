@@ -23,3 +23,67 @@ create table zkpc_user(
 	last_login_ip varchar(64),
 	notes_count integer
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table zkpc_section(
+	sid integer not null primary key auto_increment,
+	name varchar(16) not null,
+	state int(1) default 1 not null,
+	sort integer default 0 not null
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table zkpc_node(
+	nid integer not null primary key auto_increment,
+	name varchar(16) not null,
+	state int(1) default 1 not null,
+	sort integer default 0 not null,
+	topics_count integer default 0 not null,
+	summary varchar(128),
+	section_id integer
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table zkpc_topic(
+	tid integer not null primary key auto_increment,
+	title varchar(64) not null,
+	content text,
+	state int(1) default 1 not null,
+	replies_count integer,
+	last_reply_user_id integer,
+	replied_at datetime,
+	source varchar(64),
+	created_at datetime,
+	updated_at datetime,
+	node_id integer,
+	user_id integer
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+create table zkpc_reply(
+	rid integer not null primary key auto_increment,
+	content text not null,
+	state int(1) default 1 not null,
+	source varchar(64),
+	created_at datetime,
+	updated_at datetime,
+	topic_id integer,
+	user_id integer
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE zkpc_node ADD CONSTRAINT FK_node_section
+FOREIGN KEY (section_id) REFERENCES zkpc_section (sid)
+ON DELETE CASCADE ON UPDATE RESTRICT;
+
+ALTER TABLE zkpc_topic ADD CONSTRAINT FK_topic_user
+FOREIGN KEY (user_id) REFERENCES zkpc_user (uid)
+ON DELETE CASCADE ON UPDATE RESTRICT;
+
+ALTER TABLE zkpc_topic ADD CONSTRAINT Fk_topic_node
+FOREIGN KEY  (node_id) REFERENCES zkpc_node (nid)
+ON DELETE CASCADE ON UPDATE RESTRICT;
+
+ALTER TABLE zkpc_reply ADD CONSTRAINT FK_reply_user
+FOREIGN KEY (user_id) REFERENCES zkpc_user (uid)
+ON DELETE CASCADE ON UPDATE RESTRICT;
+
+ALTER TABLE zkpc_reply ADD CONSTRAINT FK_reply_topic
+FOREIGN KEY (topic_id) REFERENCES zkpc_topic (tid)
+ON DELETE CASCADE ON UPDATE RESTRICT;

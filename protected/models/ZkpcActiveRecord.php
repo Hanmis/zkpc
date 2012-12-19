@@ -14,12 +14,11 @@ abstract class ZkpcActiveRecord extends CActiveRecord
         {
             //set the create date, last updated date
             $this->created_at = $this->updated_at = new CDbExpression('NOW()');
-
         } else {
             //not a new record, so just set the last updated time
             //and last updated user id
-//            $this->update_time = new CDbExpression('NOW()');
-//            $this->update_user_id = Yii::app()->user->id;
+            $this->updated_at = new CDbExpression('NOW()');
+            //$this->update_user_id = Yii::app()->user->id;
         }
         return parent::beforeValidate();
     }

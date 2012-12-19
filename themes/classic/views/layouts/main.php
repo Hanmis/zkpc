@@ -50,7 +50,7 @@
                         'onmouseover'=>'getUserMenu();',
                     ))?>
                     <ul id="dropdown-menu">
-                        <li><a>我的主页</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('user/view')?>">我的主页</a></li>
                         <li><a>记事本</a></li>
                         <li><a href="<?php echo Yii::app()->createUrl('user/logout')?>">注销</a></li>
                     </ul>

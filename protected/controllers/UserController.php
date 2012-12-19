@@ -88,4 +88,28 @@ class UserController extends Controller
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);
     }
+
+    public function actionView()
+    {
+        if(!isset($_GET['uid'])){
+            $uid = Yii::app()->user->id;
+        } else {
+            $uid = $_GET['uid'];
+        }
+        $this->render('view',array(
+            'model'=>$this->loadModel($uid),
+        ));
+    }
+
+    public function loadModel($id)
+    {
+        $model=User::model()->findByPk($id);
+        if(!$model->avatar_file_name)
+        {
+            $model->avatar_file_name = User::get_gravatar($model->email, 120); //使用Gravatar的图片
+        }
+        if($model===null)
+            throw new CHttpException(404,'The requested page does not exist.');
+        return $model;
+    }
 }

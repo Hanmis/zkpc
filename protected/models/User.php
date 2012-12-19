@@ -83,6 +83,8 @@ class User extends ZkpcActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'replies' => array(self::HAS_MANY, 'Reply', 'user_id'),
+            'topics' => array(self::HAS_MANY, 'Topic', 'user_id'),
 		);
 	}
 
@@ -163,5 +165,18 @@ class User extends ZkpcActiveRecord
 	public function hashPassword($pwd, $pwd_salt)
 	{
 		return md5($pwd_salt.$pwd);
+	}
+
+    public static function get_gravatar( $email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts = array() ) {
+	    $url = 'http://www.gravatar.com/avatar/';
+	    $url .= md5( strtolower( trim( $email ) ) );
+	    $url .= "?s=$s&d=$d&r=$r";
+	    if ( $img ) {
+	        $url = '<img src="' . $url . '"';
+	        foreach ( $atts as $key => $val )
+	            $url .= ' ' . $key . '="' . $val . '"';
+	        $url .= ' />';
+	    }
+	    return $url;
 	}
 }
