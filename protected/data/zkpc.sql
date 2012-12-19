@@ -42,7 +42,7 @@ create table zkpc_node(
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 create table zkpc_topic(
-	tid integer not null primary key auto_increment,
+	tid integer not null primary key auto_increment;
 	title varchar(64) not null,
 	content text,
 	state int(1) default 1 not null,
@@ -56,9 +56,8 @@ create table zkpc_topic(
 	user_id integer
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-create table zkpc_reply(
-	rid integer not null primary key auto_increment,
+create table zkpc_replie(
+	rid integer not null primary key auto_increment;
 	content text not null,
 	state int(1) default 1 not null,
 	source varchar(64),
@@ -67,6 +66,7 @@ create table zkpc_reply(
 	topic_id integer,
 	user_id integer
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 ALTER TABLE zkpc_node ADD CONSTRAINT FK_node_section
 FOREIGN KEY (section_id) REFERENCES zkpc_section (sid)
