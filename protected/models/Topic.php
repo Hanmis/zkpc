@@ -22,13 +22,15 @@
  * @property Node $node
  * @property User $user
  */
-class Topic extends ZkpcActiveRecord
+class Topic extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
 	 * @return Topic the static model class
 	 */
+    const STATUS_PUBLISHED = 1;
+
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -68,9 +70,9 @@ class Topic extends ZkpcActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'replies' => array(self::HAS_MANY, 'Reply', 'topic_id'),
-			'node' => array(self::BELONGS_TO, 'Node', 'node_id'),
-			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
+            'replies' => array(self::HAS_MANY, 'Reply', 'topic_id'),
+            'node' => array(self::BELONGS_TO, 'Node', 'node_id'),
+            'user' => array(self::BELONGS_TO, 'User', 'user_id'),
 		);
 	}
 

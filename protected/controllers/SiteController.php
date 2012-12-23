@@ -29,7 +29,21 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+        $hot_topics = Yii::app()->db->createCommand()
+                        ->select('tid, title, replies_count, user_id, {{user}}.email')
+                        ->from('{{topic}}')
+                        ->join('{{user}}', '{{topic}}.user_id = {{user}}.uid')
+                        ->where('{{topic}}.state=:state', array(':state'=>Topic::STATUS_PUBLISHED))
+                        ->order('replies_count desc')
+                        ->limit(10)
+                        ->offset(0)
+                        ->queryAll();
+        $sections = Section::model()->findAll();
+//        var_dump($sections[0]->nodes[1]->name);exit;
+		$this->render('index', array(
+            'hot_topics' => $hot_topics,
+            'sections' => $sections
+        ));
 	}
 
 	/**
@@ -92,7 +106,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+                $this->redirect(Yii::app()->user->returnUrl);
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));

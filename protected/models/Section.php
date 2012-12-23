@@ -19,6 +19,7 @@ class Section extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Section the static model class
 	 */
+    const STATUS_PUBLISHED = 1;
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
