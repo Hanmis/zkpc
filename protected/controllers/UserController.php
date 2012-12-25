@@ -114,4 +114,36 @@ class UserController extends Controller
             throw new CHttpException(404,'The requested page does not exist.');
         return $model;
     }
+
+	//find password
+	public function actionFindPwd()
+	{
+		$model = new FindPwdForm;
+		
+		if (isset($_POST['FindPwdForm'])) {
+			$model->attributes=$_POST['FindPwdForm'];
+			$message = "hello world";
+			if($model->validate()){
+				$mail = Yii::app()->mailer;
+				$mail->Host = 'smtp.qq.com';
+				$mail->IsSMTP();
+				$mail->SMTPAuth = true;
+				$mail->Username = '376841127@qq.com';
+				$mail->Password = 'gyhlhm';
+				$mail->From = "376841127@qq.com";
+				
+				$mail->AddAddress($model->email, "hanmis");
+				$mail->Subject = "找回密码";
+				$mail->Body = $message;
+				if($mail->Send()){
+					var_dump($model->email);exit;
+				} else {
+					echo "发送失败";exit;
+				}
+				
+			}		
+		} 
+		
+		$this->render('findpwd', array('model'=>$model));
+	}
 }
