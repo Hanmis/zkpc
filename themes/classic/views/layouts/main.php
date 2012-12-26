@@ -74,20 +74,20 @@
     <!-- breadcrumbs end-->
     <!--消息框-->
     <?php
-    /*
-    $message = "this is yii at work";
-            $this->widget('application.extensions.toastMessage.toastMessageWidget',
+    if(Yii::app()->user->hasFlash('message')){
+    	$message = Yii::app()->user->getFlash('message');
+		$this->widget('application.extensions.toastMessage.toastMessageWidget',
             array(
                 'message'=>$message,
-                'type'=>'warning',
+                'type'=>'success',
                 'options'=>array(
                     'sticky'=>false,
                     'position'=>'middle-center',
                     'stayTime'=>3000
                 )
-            ));*/
+        ));
+    }
     ?>
-
     <!--消息框结束-->
 	<?php echo $content; ?>
 

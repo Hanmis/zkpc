@@ -54,6 +54,7 @@ class UserController extends Controller
             // validate user input and redirect to the previous page if valid
             if($model->validate() && $model->login())
             {
+            	Yii::app()->user->setFlash('message', '登录成功');
                 $this->redirect(Yii::app()->user->returnUrl);
             }
         }
@@ -79,8 +80,10 @@ class UserController extends Controller
             $model->pwd_salt = uniqid('zkpc');
             $model->pwd = md5($model->pwd_salt.$_POST['User']['pwd']);
             $model->repwd = md5($model->pwd_salt.$_POST['User']['repwd']); //服务器端验证的时候，确认密码也需要加密才能同步
-            if($model->save())
-                $this->render('login');
+            if($model->save()){
+            	Yii::app()->user->setFlash('message', '注册成功，请登录');
+				$this->redirect(Yii::app()->createUrl('user/login'));//返回的到登录界面
+            }
         }
         $this->render('register', array('model'=>$model));
     }
@@ -122,23 +125,25 @@ class UserController extends Controller
 		
 		if (isset($_POST['FindPwdForm'])) {
 			$model->attributes=$_POST['FindPwdForm'];
-			$message = "hello world";
+			$message = "你好！找回密码";
 			if($model->validate()){
 				$mail = Yii::app()->mailer;
 				$mail->Host = 'smtp.qq.com';
+				$mail->CharSet = "UTF-8";
 				$mail->IsSMTP();
 				$mail->SMTPAuth = true;
 				$mail->Username = '376841127@qq.com';
 				$mail->Password = 'gyhlhm';
 				$mail->From = "376841127@qq.com";
-				
+				$mail->FromName = "zkpc";
 				$mail->AddAddress($model->email, "hanmis");
 				$mail->Subject = "找回密码";
 				$mail->Body = $message;
 				if($mail->Send()){
-					var_dump($model->email);exit;
+					Yii::app()->user->setFlash('message', '几分钟后，你将收到修改密码的邮件！');
+					$this->redirect(Yii::app()->createUrl('user/login'));//返回的到登录界面
 				} else {
-					echo "发送失败";exit;
+					Yii::app()->user->setFlash('message', '邮件发送失败，请重新提交');
 				}
 				
 			}		
