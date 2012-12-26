@@ -5078,3 +5078,68 @@ REQUEST_URI=/zkpc/
 in D:\wamp\web2\zkpc\themes\classic\views\site\index.php (46)
 in D:\wamp\web2\zkpc\protected\controllers\SiteController.php (46)
 in D:\wamp\web2\zkpc\index.php (13)
+2012/12/26 14:48:09 [error] [php] Trying to get property of non-object (D:\wamp\web2\zkpc\protected\controllers\UserController.php:130)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#1 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#2 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#3 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/findPwd
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (130)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/26 14:48:24 [error] [php] Trying to get property of non-object (D:\wamp\web2\zkpc\protected\controllers\UserController.php:130)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#1 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#2 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#3 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/findPwd
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (130)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/26 14:48:34 [error] [php] Trying to get property of non-object (D:\wamp\web2\zkpc\protected\controllers\UserController.php:130)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#1 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#2 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#3 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/findPwd
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (130)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/26 15:03:26 [error] [php] Trying to get property of non-object (D:\wamp\web2\zkpc\protected\controllers\UserController.php:130)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#1 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#2 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#3 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/findPwd
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (130)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/26 15:04:08 [error] [php] Trying to get property of non-object (D:\wamp\web2\zkpc\protected\controllers\UserController.php:130)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#1 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#2 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#3 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/findPwd
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (130)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/26 15:33:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "resetpwd".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('resetpwd')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('resetpwd')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/resetpwd')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=user/resetpwd&p=%85%A9%E6%8A%C6%DA%E3g%F7k%9DZ%E7%8E%B6q%C6%9Ak%9E%F7%7B%AEy%7F%8Fw%E1
+---

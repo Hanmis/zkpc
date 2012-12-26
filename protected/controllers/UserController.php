@@ -124,13 +124,29 @@ class UserController extends Controller
 		$model = new FindPwdForm;
 		
 		if (isset($_POST['FindPwdForm'])) {
-			$model->attributes=$_POST['FindPwdForm'];
-			$message = "你好！找回密码";
+			$model->attributes = $_POST['FindPwdForm'];
+            $email = $model->email;
+            $user  = User::model()->find('LOWER(email)=?', array(strtolower($email)));
+            if(!isset($user->name)){
+                Yii::app()->user->setFlash('message', '此邮箱没有注册过');
+                $this->redirect(Yii::app()->createUrl('user/findpwd'));
+            }else{
+                $x = md5($user->email."+".$user->pwd_salt);
+                $string = base64_decode($user->name.".".$x);
+                $url = Yii::app()->createUrl('user/resetpwd', array('p'=>$string));
+            }
+			$message = "尊敬的".$user->name."先生/女士：<br /><br/>&nbsp;&nbsp;&nbsp;&nbsp;".
+			           " 你使用了本站提供的密码找回功能，如果你确认此密码找回功能是你启用的，".
+                        "请点击下面的链接，按流程进行密码重设。<br/><br/>欢迎你经常访问本站。".
+                        "站长无喱头谢谢你经常光顾本站！".
+                        "<br><Br><a href=".$url.">确认密码找回</a>";
+//            echo $message;exit;
 			if($model->validate()){
 				$mail = Yii::app()->mailer;
 				$mail->Host = 'smtp.qq.com';
 				$mail->CharSet = "UTF-8";
 				$mail->IsSMTP();
+                $mail->IsHTML();
 				$mail->SMTPAuth = true;
 				$mail->Username = '376841127@qq.com';
 				$mail->Password = 'gyhlhm';
@@ -151,4 +167,8 @@ class UserController extends Controller
 		
 		$this->render('findpwd', array('model'=>$model));
 	}
+
+    public function actionResetPwd($p){
+
+    }
 }

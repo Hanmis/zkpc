@@ -13,6 +13,9 @@ $this->breadcrumbs=array(
 	'enableClientValidation'=>false,
 )); ?>
 
+    <div class="row">
+        *此功能将会发送一个找回密码的特别链接到你的邮箱，通过改链接可以进入重置密码的页面
+    </div>
 	<div class="row">
 		<?php echo $form->labelEx($model,'注册邮箱'); ?>
 		<?php echo $form->textField($model,'email'); ?>
