@@ -1,7 +1,7 @@
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'find-pwd-form-findpwd-form',
+	'id'=>'findpwd-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 

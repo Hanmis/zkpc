@@ -11,7 +11,7 @@ class FindPwdForm extends CFormModel
 		return array(
             array('email', 'required', 'message'=>'Email不能为空'),
             array('email', 'email', 'message'=>'请输入正确的邮箱'),
-			array('email', 'safe', 'on'=>'search'),
+            array('email', 'authenticate'),
 		);
 	}
 	
@@ -28,9 +28,7 @@ class FindPwdForm extends CFormModel
 		{
 			$user = User::model()->find('LOWER(email)=?', array(strtolower($this->email)));
 			if (!isset($user->email))
-				$this->addError('email','不存在此邮箱');
-			else 
-				$this->setState('email', $user->email);				
+				$this->addError('email','此邮箱没有注册过');			
 		}
 	}
 }
