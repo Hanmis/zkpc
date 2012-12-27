@@ -54,7 +54,7 @@ class UserController extends Controller
             // validate user input and redirect to the previous page if valid
             if($model->validate() && $model->login())
             {
-            	Yii::app()->user->setFlash('message', '登录成功');
+            	Yii::app()->user->setFlash('success', '登录成功');
                 $this->redirect(Yii::app()->user->returnUrl);
             }
         }
@@ -81,7 +81,7 @@ class UserController extends Controller
             $model->pwd = md5($model->pwd_salt.$_POST['User']['pwd']);
             $model->repwd = md5($model->pwd_salt.$_POST['User']['repwd']); //服务器端验证的时候，确认密码也需要加密才能同步
             if($model->save()){
-            	Yii::app()->user->setFlash('message', '注册成功，请登录');
+            	Yii::app()->user->setFlash('success', '注册成功，请登录');
 				$this->redirect(Yii::app()->createUrl('user/login'));//返回的到登录界面
             }
         }
@@ -151,10 +151,10 @@ class UserController extends Controller
 				$mail->Subject = "找回密码";
 				$mail->Body = $message;
 				if($mail->Send()){
-					Yii::app()->user->setFlash('message', '几分钟后，你将收到修改密码的邮件！');
+					Yii::app()->user->setFlash('success', '几分钟后，你将收到修改密码的邮件！');
 					$this->redirect(Yii::app()->createUrl('user/login'));//返回的到登录界面
 				} else {
-					Yii::app()->user->setFlash('message', '邮件发送失败，请重新提交');
+					Yii::app()->user->setFlash('error', '邮件发送失败，请重新提交');
 					$this->redirect(Yii::app()->createUrl('user/findpwd'));
 				}
 			}         				
@@ -202,7 +202,7 @@ class UserController extends Controller
 					$user->pwd_salt = $pwd_salt;
 					$user->pwd = $model->pwd;
 					if ($user->update()) {
-						Yii::app()->user->setFlash('message', '重设密码成功，请登录');
+						Yii::app()->user->setFlash('success', '重设密码成功，请登录');
 						$this->redirect(Yii::app()->createUrl('user/login'));
 					} else {
 						throw new CHttpException(403, 'update exception');

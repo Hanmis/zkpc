@@ -8,16 +8,17 @@
  */
 class Helper
 {
-    public static function getToastMessage($controller, $message)
+    //$type = success or warning or notice or error
+    public static function getToastMessage($controller, $message, $type)
     {
         return $controller->widget('application.extensions.toastMessage.toastMessageWidget',
             array(
                 'message'=>$message,
-                'type'=>'success',
+                'type'=>$type,
                 'options'=>array(
                     'sticky'=>false,
                     'position'=>'middle-center',
-                    'stayTime'=>3000
+                    'stayTime'=>2000
                 )
             ));
     }

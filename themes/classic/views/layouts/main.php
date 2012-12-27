@@ -74,18 +74,17 @@
     <!-- breadcrumbs end-->
     <!--消息框-->
     <?php
-    if(Yii::app()->user->hasFlash('message')){
-    	$message = Yii::app()->user->getFlash('message');
-		$this->widget('application.extensions.toastMessage.toastMessageWidget',
-            array(
-                'message'=>$message,
-                'type'=>'success',
-                'options'=>array(
-                    'sticky'=>false,
-                    'position'=>'middle-center',
-                    'stayTime'=>3000
-                )
-        ));
+    if(Yii::app()->user->hasFlash('success')){
+        Helper::getToastMessage($this, Yii::app()->user->getFlash('success'), 'success');
+    }
+    if(Yii::app()->user->hasFlash('error')){
+        Helper::getToastMessage($this, Yii::app()->user->getFlash('error'), 'error');
+    }
+    if(Yii::app()->user->hasFlash('notice')){
+        Helper::getToastMessage($this, Yii::app()->user->getFlash('notice'), 'notice');
+    }
+    if(Yii::app()->user->hasFlash('warning')){
+        Helper::getToastMessage($this, Yii::app()->user->getFlash('warning'), 'warning');
     }
     ?>
     <!--消息框结束-->

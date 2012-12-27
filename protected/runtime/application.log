@@ -5143,3 +5143,79 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/zkpc/index.php?r=user/resetpwd&p=%85%A9%E6%8A%C6%DA%E3g%F7k%9DZ%E7%8E%B6q%C6%9Ak%9E%F7%7B%AEy%7F%8Fw%E1
 ---
+2012/12/27 13:57:13 [warning] [application] Failed to set unsafe attribute "email" of "ResetPwdForm".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (192)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/27 13:57:19 [warning] [application] Failed to set unsafe attribute "email" of "ResetPwdForm".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (192)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/27 13:57:26 [warning] [application] Failed to set unsafe attribute "email" of "ResetPwdForm".
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (192)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/27 13:58:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---
+2012/12/27 14:09:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'url error' in D:\wamp\web2\zkpc\protected\controllers\UserController.php:188
+Stack trace:
+#0 [internal function]: UserController->actionResetPwd('aGFubWlzLmJhNDJ...')
+#1 D:\wamp\web2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#2 D:\wamp\web2\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#3 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('resetpwd')
+#7 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('user/resetpwd')
+#8 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/zkpc/index.php?r=user/resetpwd&p=aGFubWlzLmJhNDJmM2E1MWE1NDYyY2NhYWE1NzNlNjU1ZjQ5MzRi
+---
+2012/12/27 14:36:15 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.usser" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\base\CModule.php(106): CComponent->__get('usser')
+#1 D:\wamp\web2\zkpc\themes\classic\views\layouts\main.php(80): CModule->__get('usser')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#6 D:\wamp\web2\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#7 D:\wamp\web2\framework\web\CBaseController.php(207): COutputProcessor->run()
+#8 D:\wamp\web2\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 D:\wamp\web2\zkpc\themes\classic\views\layouts\column1.php(6): CBaseController->endContent()
+#10 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#11 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#12 D:\wamp\web2\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#13 D:\wamp\web2\zkpc\protected\controllers\SiteController.php(46): CController->render('index', Array)
+#14 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#15 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 D:\wamp\web2\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#19 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#20 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/zkpc/index.php
+HTTP_REFERER=http://localhost:81/zkpc/index.php
+---
+2012/12/27 14:59:11 [error] [php] Trying to get property of non-object (D:\wamp\web2\zkpc\protected\controllers\UserController.php:112)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#2 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#3 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#4 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#5 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/view
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (112)
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (105)
+in D:\wamp\web2\zkpc\index.php (13)
