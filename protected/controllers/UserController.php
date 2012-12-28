@@ -35,6 +35,7 @@ class UserController extends Controller
     {
         $this->user_type = $u_type;
     }
+	
     public function actionLogin()
     {
         $model=new LoginForm;
@@ -54,7 +55,7 @@ class UserController extends Controller
             // validate user input and redirect to the previous page if valid
             if($model->validate() && $model->login())
             {
-            	Yii::app()->user->setFlash('success', '登录成功');
+            	Yii::app()->user->setFlash('success', '登录成功'); //自定义了toastMessage弹出消息
                 $this->redirect(Yii::app()->user->returnUrl);
             }
         }
@@ -105,7 +106,11 @@ class UserController extends Controller
             'model'=>$this->loadModel($uid),
         ));
     }
-
+	
+	/**
+	 * 根据用户id返回一个用户对象
+	 * 用户头像使用的是用户在Gravatar网站中的头像
+	 */
     public function loadModel($id)
     {
         $model=User::model()->findByPk($id);
@@ -118,7 +123,13 @@ class UserController extends Controller
         return $model;
     }
 
-	//find password
+	/**
+	 * 找回密码流程
+	 * 1、用户输入注册邮箱
+	 * 2、服务器端通过此邮箱找出pwd_salt和用户名
+	 * 3、构造发送给邮箱的路径参数
+	 * 4、发送邮件
+	 */
 	public function actionFindPwd()
 	{
 		$model = new FindPwdForm;
@@ -163,6 +174,13 @@ class UserController extends Controller
 		$this->render('findpwd', array('model'=>$model));
 	}
 
+	/**
+	 * 重设密码流程
+	 * 1、根据邮件中的路径，解密参数。
+	 * 2、通过解密得到的用户名查询用户pwd_salt和邮箱，验证是否相同
+	 * 3、将邮箱隐藏传到重设密码的表单
+	 * 4、通过重设密码的提交的表单更新用户密码和pwd_salt
+	 */
     public function actionResetPwd($p){
     	
     	$model = new ResetPwdForm;

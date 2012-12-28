@@ -1,20 +1,21 @@
 <?php
+/* @var $this UserController */
+/* @var $model ResetPwdForm */
+/* @var $form CActiveForm  */
+
 $this->pageTitle=Yii::app()->name . ' - resetpwd';
 $this->breadcrumbs=array(
 	'重设密码',
 );
 ?>
 <h1 class="title">重设密码</h1>
-
+<!--form begin-->
 <div class="form">
-
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'resetpwd-form',
 	'enableAjaxValidation'=>false,
 	'enableClientValidation'=>true,
 )); ?>
-
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'密码'); ?>
 		<?php echo $form->passwordField($model,'pwd'); ?>
@@ -35,4 +36,5 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div>
+<!-- form end-->

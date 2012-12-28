@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/user.css "/>
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
     <script type="text/javascript">
+    	//用户下拉框js
         function getUserMenu(){
             document.getElementById("dropdown-menu").style.display="inline";
         }
@@ -88,15 +89,18 @@
     }
     ?>
     <!--消息框结束-->
+    <!--页面内容开始-->
 	<?php echo $content; ?>
-
+	<!--页面内容结束-->
 	<div class="clear"></div>
-
+	
+	<!-- footer begin-->
 	<div id="footer">
 		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
+	</div>
+	<!-- footer end-->
 
 </div><!-- page -->
 

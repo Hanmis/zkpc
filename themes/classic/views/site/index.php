@@ -1,7 +1,8 @@
+<!--首页内容开始-->
 <div class="container">
-<!--    <div class="content_nav">Home-->
-<!--    </div><br/>-->
+	<!--首页建议帖子开始-->
     <div class="home_suggest_topics">
+    	<!--热门帖子开始-->
         <div class="high_likes_topics box">
             <h2 class="title">热门帖子</h2>
             <ul>
@@ -16,6 +17,8 @@
                 <?php endfor;?>
             </ul>
         </div>
+        <!--热门帖子结束-->
+        <!--高分帖子开始-->
         <div class="high_replies_topics box">
             <h2 class="title">高分帖子</h2>
             <ul>
@@ -35,7 +38,10 @@
                 </li>
             </ul>
         </div>
+        <!--高分帖子结束-->
     </div><br/>
+    <!--首页建议帖子结束-->
+    <!--首页讨论节点分类导航开始-->
     <div class="sections box">
         <h2 class="title">讨论节点分类导航</h2>
         <ul>
@@ -51,6 +57,8 @@
             <?php endfor;?>
         </ul>
     </div>
+    <!--首页讨论节点分类导航结束-->
+    <!--首页热门代码分享开始-->
     <div class="hotcode box">
         <h2 class="title">热门代码分享</h2>
         <ul>
@@ -59,4 +67,6 @@
             <li> <a href="/users/city/%E5%8C%97%E4%BA%AC">C++</a></li>
         </ul>
     </div>
+    <!--首页热门代码分享结束-->
 </div>
+<!--首页内容结束-->

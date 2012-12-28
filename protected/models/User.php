@@ -167,6 +167,9 @@ class User extends ZkpcActiveRecord
 		return md5($pwd_salt.$pwd);
 	}
 
+	/**
+	 * 获得用户在gravatar网站头像链接的函数
+	 */
     public static function get_gravatar( $email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts = array() ) {
 	    $url = 'http://www.gravatar.com/avatar/';
 	    $url .= md5( strtolower( trim( $email ) ) );

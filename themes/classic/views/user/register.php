@@ -1,9 +1,15 @@
 <?php
+/* @var $this UserController*/
+/* @var $model User*/
+/* @var $form CActiveForm*/
+
+$this->pageTitle = Yii::app()->name.'- register';
 $this->breadcrumbs=array(
 	'注册',
 );
 ?>
 <h1 class="title">注册</h1>
+<!--form begin-->
 <div class="form">
 
     <?php $form=$this->beginWidget('CActiveForm', array(
@@ -63,4 +69,5 @@ $this->breadcrumbs=array(
     </div>
     <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div>
+<!-- form end-->

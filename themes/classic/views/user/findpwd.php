@@ -1,11 +1,15 @@
 <?php
+/* @var $this UserController */
+/* @var $model ResetPwdForm */
+/* @var $form CActiveForm  */
+
 $this->pageTitle=Yii::app()->name . ' - findpwd';
 $this->breadcrumbs=array(
 	'找回密码',
 );
 ?>
 <h1 class="title">找回密码</h1>
-
+<!--form begin-->
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -30,4 +34,5 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div>
+<!-- form end-->

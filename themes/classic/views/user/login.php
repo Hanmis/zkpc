@@ -9,6 +9,7 @@ $this->breadcrumbs=array(
 );
 ?>
 <h1 class="title">登录</h1>
+<!--form begin-->
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'login-form',
@@ -43,4 +44,5 @@ $this->breadcrumbs=array(
 	</div>
 
 <?php $this->endWidget(); ?>
-</div><!-- form -->
+</div>
+<!-- form end-->

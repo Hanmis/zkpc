@@ -6,6 +6,10 @@
  * Time: 下午5:17
  * To change this template use File | Settings | File Templates.
  */
+  
+/**
+ * 继承此类的AR类，再保存模型数据的时候会自动保存created_at
+ */
 abstract class ZkpcActiveRecord extends CActiveRecord
 {
     public function beforeValidate()
