@@ -6,7 +6,7 @@ class TopicController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/topic_column';
 
 	/**
 	 * @return array action filters
@@ -24,6 +24,7 @@ class TopicController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
+    /*
 	public function accessRules()
 	{
 		return array(
@@ -44,15 +45,15 @@ class TopicController extends Controller
 			),
 		);
 	}
-
+    */
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+	public function actionView($tid)
 	{
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$this->loadModel($tid),
 		));
 	}
 
@@ -151,6 +152,10 @@ class TopicController extends Controller
 	public function loadModel($id)
 	{
 		$model=Topic::model()->findByPk($id);
+//        if(!$model->avatar_file_name)
+//        {
+//            $model->avatar_file_name = User::get_gravatar($model->email, 80);   //使用Gravater的图片
+//        }
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

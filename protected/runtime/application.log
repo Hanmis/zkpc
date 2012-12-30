@@ -5219,3 +5219,225 @@ REQUEST_URI=/zkpc/index.php?r=user/view
 in D:\wamp\web2\zkpc\protected\controllers\UserController.php (112)
 in D:\wamp\web2\zkpc\protected\controllers\UserController.php (105)
 in D:\wamp\web2\zkpc\index.php (13)
+2012/12/29 13:25:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\wamp\web2\framework\web\CController.php:337
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('view')
+#9 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('topic/view')
+#10 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/zkpc/index.php?r=topic/view&tid=1
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2012/12/29 13:27:00 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\wamp\web2\framework\web\CController.php:337
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('view')
+#9 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('topic/view')
+#10 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/zkpc/index.php?r=topic/view&tid=1
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2012/12/29 13:27:45 [error] [php] Trying to get property of non-object (D:\wamp\web2\zkpc\protected\controllers\UserController.php:117)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 D:\wamp\web2\framework\web\CController.php(287): UserController->runAction()
+#2 D:\wamp\web2\framework\web\CController.php(266): UserController->runActionWithFilters()
+#3 D:\wamp\web2\framework\web\CWebApplication.php(283): UserController->run()
+#4 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#5 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=user/view&tid=1
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (117)
+in D:\wamp\web2\zkpc\protected\controllers\UserController.php (106)
+in D:\wamp\web2\zkpc\index.php (13)
+2012/12/29 13:27:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\wamp\web2\framework\web\CController.php:337
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('view')
+#9 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('topic/view')
+#10 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/zkpc/index.php?r=topic/view&tid=1
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2012/12/29 13:28:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\wamp\web2\framework\web\CController.php:337
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('view')
+#9 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('topic/view')
+#10 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/zkpc/index.php?r=topic/view
+---
+2012/12/29 13:28:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\wamp\web2\framework\web\CController.php:337
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('view')
+#9 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('topic/view')
+#10 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/zkpc/index.php?r=topic/view&tid=2
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2012/12/29 13:29:00 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\wamp\web2\framework\web\CController.php:337
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('view')
+#9 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('topic/view')
+#10 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/zkpc/index.php?r=topic/view&tid=1
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2012/12/29 13:29:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\wamp\web2\framework\web\CController.php:337
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('view')
+#9 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('topic/view')
+#10 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/zkpc/index.php?r=topic/view
+---
+2012/12/29 13:30:12 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\wamp\web2\framework\web\CController.php:337
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('view')
+#9 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('topic/view')
+#10 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/zkpc/index.php?r=topic/view
+---
+2012/12/29 13:30:58 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\wamp\web2\framework\web\CController.php:337
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('view')
+#9 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('topic/view')
+#10 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/zkpc/index.php?r=topic/view&id=1
+---
+2012/12/29 13:34:13 [error] [exception.CException] exception 'CException' with message 'TopicController and its behaviors do not have a method or closure named "getUserType".' in D:\wamp\web2\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php(12): CComponent->__call('getUserType', Array)
+#1 D:\wamp\web2\zkpc\themes\classic\views\layouts\user_column.php(12): TopicController->getUserType()
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\zkpc\protected\controllers\TopicController.php(57): CController->render('view', Array)
+#6 [internal function]: TopicController->actionView('2')
+#7 D:\wamp\web2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TopicController), Array)
+#8 D:\wamp\web2\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TopicController), Object(ReflectionMethod), Array)
+#9 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#16 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('view')
+#18 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('topic/view')
+#19 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/zkpc/index.php?r=topic/view&tid=2
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2012/12/29 14:22:22 [error] [exception.CException] exception 'CException' with message 'Property "Topic.avatar_file_name" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('avatar_file_nam...')
+#1 D:\wamp\web2\zkpc\protected\controllers\TopicController.php(155): CActiveRecord->__get('avatar_file_nam...')
+#2 D:\wamp\web2\zkpc\protected\controllers\TopicController.php(56): TopicController->loadModel('2')
+#3 [internal function]: TopicController->actionView('2')
+#4 D:\wamp\web2\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TopicController), Array)
+#5 D:\wamp\web2\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TopicController), Object(ReflectionMethod), Array)
+#6 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#13 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('view')
+#15 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('topic/view')
+#16 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/zkpc/index.php?r=topic/view&tid=2
+HTTP_REFERER=http://localhost:81/zkpc/
+---

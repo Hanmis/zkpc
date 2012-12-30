@@ -11,7 +11,7 @@
                     <a href="#" class="img_a">
                         <img class="uface" style="width:16px;height:16px;" src=<?php echo User::get_gravatar($hot_topics[$i]['email'], 16)?> alt="">
                     </a>
-                    <a href="#"><?php  echo $hot_topics[$i]['title']?></a>
+                    <a href="<?php echo Yii::app()->createUrl('topic/view', array('tid'=>$hot_topics[$i]['tid']));?>"><?php  echo $hot_topics[$i]['title']?></a>
                     <span class="count"><?php echo $hot_topics[$i]['replies_count']?> 回复</span>
                 </li>
                 <?php endfor;?>
