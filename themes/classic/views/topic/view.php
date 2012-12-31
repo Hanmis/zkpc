@@ -99,7 +99,7 @@ $this->breadcrumbs=array(
                     </span>
                 </div>
                 <div class="reply_content">
-                    <p>Sublime好，相当于变相免费，界面也不错，能把粉色嫩系颜色配得好看，我还是第一次见，所以我用了好久都没换默认皮肤，速度好像比TM快，是TM的接班人啊</p>
+                    Sublime好，相当于变相免费，界面也不错，能把粉色嫩系颜色配得好看，我还是第一次见，所以我用了好久都没换默认皮肤，速度好像比TM快，是TM的接班人啊
                 </div>
                 <span class="opts"> </span>
             </div>
