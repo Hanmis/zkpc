@@ -5441,3 +5441,670 @@ Stack trace:
 REQUEST_URI=/zkpc/index.php?r=topic/view&tid=2
 HTTP_REFERER=http://localhost:81/zkpc/
 ---
+2013/01/06 14:53:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=topic/view&tid=1
+---
+2013/01/06 14:53:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/06 14:53:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cool".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('cool')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('cool')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/cool')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/cool
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/wiki
+---
+2013/01/06 14:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/cool
+---
+2013/01/06 14:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "share".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('share')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('share')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/share')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/share
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/member
+---
+2013/01/10 12:52:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zkpc.zkpc_coolsite_type' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `zkpc_coolsite_type`.
+in D:\wamp\web2\zkpc\protected\models\CoolsiteType.php (24)
+in D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php (131)
+in D:\wamp\web2\zkpc\index.php (13)
+2013/01/10 12:52:30 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{coolsite_type}}" for active record class "CoolsiteType" cannot be found in the database.' in D:\wamp\web2\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(CoolsiteType))
+#1 D:\wamp\web2\zkpc\protected\models\CoolsiteType.php(24): CActiveRecord::model('CoolsiteType')
+#2 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(131): CoolsiteType::model()
+#3 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#4 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#13 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#14 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 12:55:42 [error] [php] Undefined offset: 0 (D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php:13)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(870): CoolsiteController->renderFile()
+#1 D:\wamp\web2\framework\web\CController.php(783): CoolsiteController->renderPartial()
+#2 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CoolsiteController->render()
+#3 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#4 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CoolsiteController->runAction()
+#6 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CoolsiteController->filterAccessControl()
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(266): CoolsiteController->runActionWithFilters()
+#12 D:\wamp\web2\framework\web\CWebApplication.php(283): CoolsiteController->run()
+#13 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#14 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=coolsite
+in D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php (13)
+in D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php (135)
+in D:\wamp\web2\zkpc\index.php (13)
+2013/01/10 13:04:38 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.0" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('0')
+#1 D:\wamp\web2\framework\base\CModel.php(593): CActiveRecord->__get('0')
+#2 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CModel->offsetGet(0)
+#3 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#4 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#6 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#7 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#8 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#9 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#16 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#18 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#19 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:05:44 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\framework\base\CModel.php(593): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CModel->offsetGet('coolsite')
+#3 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#4 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#6 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#7 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#8 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#9 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#16 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#18 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#19 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:05:55 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\framework\base\CModel.php(593): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CModel->offsetGet('coolsite')
+#3 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#4 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#6 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#7 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#8 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#9 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#16 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#18 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#19 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:05:56 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\framework\base\CModel.php(593): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CModel->offsetGet('coolsite')
+#3 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#4 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#6 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#7 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#8 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#9 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#16 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#18 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#19 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:07:08 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:07:09 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:07:09 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:07:09 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:07:10 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:07:10 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:08:19 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:08:20 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:08:20 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:08:21 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:08:21 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:08:21 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:08:21 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:08:22 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:08:41 [error] [exception.CException] exception 'CException' with message 'Property "CoolsiteType.coolsite" is not defined.' in D:\wamp\web2\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\web2\framework\db\ar\CActiveRecord.php(144): CComponent->__get('coolsite')
+#1 D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php(17): CActiveRecord->__get('coolsite')
+#2 D:\wamp\web2\framework\web\CBaseController.php(127): require('D:\wamp\web2\zk...')
+#3 D:\wamp\web2\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\web2\zk...', Array, true)
+#4 D:\wamp\web2\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\web2\zk...', Array, true)
+#5 D:\wamp\web2\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CController->render('index', Array)
+#7 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#8 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\wamp\web2\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('')
+#17 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('coolsite')
+#18 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/index.php?r=coolsite
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:16:16 [error] [php] Use of undefined constant name - assumed 'name' (D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php:17)
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(870): CoolsiteController->renderFile()
+#1 D:\wamp\web2\framework\web\CController.php(783): CoolsiteController->renderPartial()
+#2 D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php(135): CoolsiteController->render()
+#3 D:\wamp\web2\framework\web\actions\CInlineAction.php(50): CoolsiteController->actionIndex()
+#4 D:\wamp\web2\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\wamp\web2\framework\web\filters\CFilterChain.php(134): CoolsiteController->runAction()
+#6 D:\wamp\web2\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\wamp\web2\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 D:\wamp\web2\framework\web\filters\CInlineFilter.php(59): CoolsiteController->filterAccessControl()
+#9 D:\wamp\web2\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 D:\wamp\web2\framework\web\CController.php(292): CFilterChain->run()
+#11 D:\wamp\web2\framework\web\CController.php(266): CoolsiteController->runActionWithFilters()
+#12 D:\wamp\web2\framework\web\CWebApplication.php(283): CoolsiteController->run()
+#13 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#14 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\wamp\web2\zkpc\index.php(13): CWebApplication->run()
+REQUEST_URI=/zkpc/index.php?r=coolsite
+in D:\wamp\web2\zkpc\themes\classic\views\coolsite\index.php (17)
+in D:\wamp\web2\zkpc\protected\controllers\CoolsiteController.php (135)
+in D:\wamp\web2\zkpc\index.php (13)
+2013/01/10 13:45:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/10 13:45:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/post
+---
+2013/01/10 13:45:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=coolsite
+---
+2013/01/10 13:45:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "share".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('share')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('share')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/share')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/share
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/member
+---
