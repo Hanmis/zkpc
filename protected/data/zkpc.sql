@@ -87,3 +87,31 @@ ON DELETE CASCADE ON UPDATE RESTRICT;
 ALTER TABLE zkpc_reply ADD CONSTRAINT FK_reply_topic
 FOREIGN KEY (topic_id) REFERENCES zkpc_topic (tid)
 ON DELETE CASCADE ON UPDATE RESTRICT;
+
+
+create table zkpc_coolsite_type(
+	ctid integer not null primary key auto_increment,
+	name varchar(20) not null,
+	state int(1) default 1 not null,
+	sort integer default 0 not null
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table zkpc_coolsite(
+	cid integer not null primary key auto_increment,
+	name varchar(32) not null,
+	favicon varchar(64),
+	url varchar(64) not null,
+	state int(1) default 1 not null,
+	sort integer default 0 not null,
+	user_id integer,
+	ct_id integer
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE zkpc_coolsite ADD CONSTRAINT FK_upload_user
+FOREIGN KEY (user_id) REFERENCES zkpc_user (uid)
+ON DELETE CASCADE ON UPDATE RESTRICT;
+
+ALTER TABLE zkpc_coolsite ADD CONSTRAINT FK_coolsite_type
+FOREIGN KEY (ct_id) REFERENCES zkpc_coolsite_type (ctid)
+ON DELETE CASCADE ON UPDATE RESTRICT;
+
