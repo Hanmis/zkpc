@@ -128,9 +128,10 @@ class CoolsiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Coolsite');
+		$coolsite = CoolsiteType::model()->findAll();	
+		// var_dump($coolsite);exit;
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'coolsite'=>$coolsite,
 		));
 	}
 

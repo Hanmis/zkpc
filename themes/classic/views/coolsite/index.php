@@ -5,9 +5,13 @@
 $this->breadcrumbs=array(
 	'酷站'=>array('index'),
 );
+$size = count($coolsite);
 ?>
 <div class="coolsite">
-	<h2>其他</h2>
+	<h2><?php 
+		echo $size."<br/>";
+	    echo $coolsite[0]->name; 
+	    ?></h2>
 	<div class="row">
 		<ul>
 			<li>
