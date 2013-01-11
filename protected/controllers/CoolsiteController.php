@@ -128,10 +128,9 @@ class CoolsiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$coolsite = CoolsiteType::model()->findAll();	
-		// var_dump($coolsite);exit;
+		$coolsiteType = CoolsiteType::model()->findAll();	
 		$this->render('index',array(
-			'coolsite'=>$coolsite,
+			'coolsiteType'=>$coolsiteType,
 		));
 	}
 
