@@ -211,11 +211,16 @@ a {
 .coolsite .site {
     margin-bottom: 10px;
     margin-left: 0;
+<<<<<<< HEAD
     width: 270px;
+=======
+    width: 175px;
+>>>>>>> c6afd4ae867dede3d7010a17d65b5cfc578a0fcc
 }
 .coolsite ul {
 	list-style: none; margin-bottom: 0; margin: 0;
 }
+<<<<<<< HEAD
 /*.coolsite ul li {*/
 	/*float:left;*/
 /*}*/
@@ -224,3 +229,13 @@ a {
     margin-top: -2px;
     width: 16px;
 }
+=======
+.coolsite ul li {
+	display: inline-block; 
+}
+.favicon {
+    height: 16px;
+    margin-top: -2px;
+    width: 16px;
+}
+>>>>>>> c6afd4ae867dede3d7010a17d65b5cfc578a0fcc

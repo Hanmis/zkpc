@@ -126,14 +126,13 @@ class CoolsiteController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
-	{
-		$coolsiteType = CoolsiteType::model()->findAll();
-		// var_dump($coolsite);exit;
-		$this->render('index',array(
-			'coolsiteType'=>$coolsiteType,
-		));
-	}
+    public function actionIndex()
+    {
+        $coolsiteType = CoolsiteType::model()->findAll();
+        $this->render('index',array(
+            'coolsiteType'=>$coolsiteType,
+        ));
+    }
 
 	/**
 	 * Manages all models.
