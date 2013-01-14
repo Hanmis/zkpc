@@ -137,7 +137,7 @@ create table zkpc_code_function(
 	read_count integer default 0,
 	created_at datetime,
 	updated_at datetime,
-	ct_id integer	
+	ct_id integer,
 	pl_id integer	
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

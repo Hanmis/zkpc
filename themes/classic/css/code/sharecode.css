@@ -1,0 +1,23 @@
+.codeCatalogs {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 2px 5px 5px;
+}
+.codeCatalogs h2 {
+    border-bottom: 1px solid #DDDDDD;
+    color: #999999;
+    font-size: 14px;
+    line-height: 100%;
+    margin: 0 -10px 20px;
+    padding: 0 10px 10px;
+}
+.codeCatalogs ul li {
+    width: 150px;
+    display: inline-block;
+}
+.codeList .stat {
+    float: right;
+}
+.codeList .lang1{
+    color: #AA0000;
+    font-size: 8pt;
+}

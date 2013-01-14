@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/code/sharecode.css"/>
 <?php
 /**
  * @这是code两列的布局，渲染到main.php主布局文件中去
