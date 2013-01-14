@@ -41,7 +41,7 @@
                 <li><a href="<?php echo Yii::app()->createUrl('site/wiki'); ?>">Wiki</a></li>
                 <li><a href="<?php echo Yii::app()->createUrl('coolsite')?>">酷站</a></li>
                 <li><a href="<?php echo Yii::app()->createUrl('site/member'); ?>">会员</a></li>
-                <li><a href="<?php echo Yii::app()->createUrl('site/share'); ?>">代码分享</a></li>
+                <li><a href="<?php echo Yii::app()->createUrl('codeFunction'); ?>">代码片段</a></li>
                 <li class="right"><a href="<?php echo Yii::app()->createUrl('user/register'); ?>">注册</a></li>
                 <li class="right">
                     <?php if(Yii::app()->user->isGuest):?>
