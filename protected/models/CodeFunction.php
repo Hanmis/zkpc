@@ -64,7 +64,8 @@ class CodeFunction extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'codeFragments' => array(self::HAS_MANY, 'CodeFragment', 'cfu_id'),
-			'ct' => array(self::BELONGS_TO, 'CodeType', 'ct_id'),
+			'codeType' => array(self::BELONGS_TO, 'CodeType', 'ct_id'),
+			'programmingLanguage' => array(self::BELONGS_TO, 'ProgrammingLanguage', 'pl_id'),
 		);
 	}
 

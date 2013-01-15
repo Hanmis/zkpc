@@ -60,7 +60,7 @@ class CodeType extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'codeFunctions' => array(self::HAS_MANY, 'CodeFunction', 'ct_id'),
-			'pl' => array(self::BELONGS_TO, 'ProgrammingLanguage', 'pl_id'),
+			'programminglanguage' => array(self::BELONGS_TO, 'ProgrammingLanguage', 'pl_id'),
 		);
 	}
 

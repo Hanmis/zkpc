@@ -127,23 +127,41 @@ class CodeFunctionController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
+	{	
 		$pl_id = Yii::app()->request->getParam('pl_id');
 		$ct_id = Yii::app()->request->getParam('ct_id');
+		$pl_name = Yii::app()->request->getParam('pl_name');
+		$ct_name = Yii::app()->request->getParam('ct_name');
+		//code catalogs 条件 
+		$db = Yii::app()->db;
+		$sql = "select * from {{programming_language}}";
+		$dbCommand = $db->createCommand($sql);
+		//code function list 条件
 		$criteria = new CDbCriteria;
-		if (isset($pl_id)) {
-			$criteria->addSearchCondition('pl_id', $pl_id);
-		}
+		if (isset($pl_id) && isset($pl_name)) {
+			$criteria->addCondition('pl_id='.$pl_id);
+			$sql = "select * from {{code_type}} where pl_id=:pl_id";
+			$dbCommand = $db->createCommand($sql);
+			$dbCommand->bindParam(':pl_id', $pl_id);
+		}	
 		if (isset($ct_id)) {
-			$criteria->addSearchCondition('ct_id', $ct_id);
+			$criteria->addCondition('ct_id='.$ct_id);
 		}
-		$cfudataProvider=new CActiveDataProvider('CodeFunction',array(
+		
+		$codeCatalogs = $dbCommand->queryAll();
+		
+		$cfudataProvider = new CActiveDataProvider('CodeFunction',array(
 			'criteria'=>$criteria,
             'sort'=>array(
                 'defaultOrder'=> 'created_at  DESC',
             )
 		));		
+		// var_dump($cfudataProvider);exit;		
 		$this->render('index',array(
+			'ct_name'=>$ct_name,
+			'pl_name'=>$pl_name,
+			'pl_id'=>$pl_id,			
+			'codeCatalogs'=>$codeCatalogs,
 			'cfudataProvider'=>$cfudataProvider,
 		));
 	}
