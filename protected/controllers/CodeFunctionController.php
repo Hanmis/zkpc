@@ -206,4 +206,32 @@ class CodeFunctionController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	public function actionShareCode()
+	{
+		$model = new ShareCodeForm;
+		$sql = "select plid, name from {{programming_language}}";
+		$db = Yii::app()->db->createCommand($sql);
+		$pls = $db->queryAll();
+		$pls = CHtml::listData($pls, 'plid', 'name'); //转成一维数组
+		
+		if (isset($_POST['ShareCode'])) {
+			
+		}
+		
+		$this->render('shareCode', array(
+			'model'=>$model,
+			'pls'=>$pls
+		));
+ 	}
+	
+	public function actionGetCodeType()
+	{
+		$pl_id = (int)$_POST['pl_id'];
+		$models = CodeType::model()->findAll(array('condition'=>'pl_id=:pl_id', 'params'=>array(':pl_id'=>$pl_id)));
+		$data = CHtml::listData($models, 'ctid', 'name');
+		foreach ($data as $value => $name) {
+			echo CHtml::tag('option', array('value'=>$value), CHtml::encode($name),true);
+		}	
+	}
 }
