@@ -6,13 +6,16 @@
 ?>
 <?php $this->beginContent('/layouts/main'); ?>
 <p></p>
-<!--code左边列开始-->
-<div class="container">
-        <?php echo $content;?>
-</div><!--code左边列结束-->
 
-<div class="column2_sidebar">
-       <h2 class="title">分享代码</h2>
-       <a href="<?php echo Yii::app()->createUrl('codeFunction/shareCode'); ?>">分享代码</a></br>
+<div class="container">
+	   <div class="column2_content">
+        <?php echo $content;?>
+       </div>
+       <div class="column2_sidebar">
+	       <h2 class="title">分享代码</h2>
+	       <a href="<?php echo Yii::app()->createUrl('codeFunction/shareCode'); ?>">分享代码</a></br>
+       </div>
 </div>
+
+
 <?php $this->endContent(); ?>
