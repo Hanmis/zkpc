@@ -9,7 +9,7 @@
 
 <div class="container">
 	   <div class="column2_content">
-        <?php echo $content;?>
+       <?php echo $content;?>
        </div>
        <div class="column2_sidebar">
 	       <h2 class="title">分享代码</h2>

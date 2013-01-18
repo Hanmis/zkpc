@@ -5,6 +5,7 @@ class SharecodeForm extends CFormModel
 	public $intro;
 	public $code;	
 	public $pl_id;
+	public $ct_id;
 	
 	public function rules()
 	{

@@ -215,10 +215,37 @@ class CodeFunctionController extends Controller
 		$pls = $db->queryAll();
 		$pls = CHtml::listData($pls, 'plid', 'name'); //转成一维数组
 		
-		if (isset($_POST['ShareCode'])) {
+		if (isset($_POST['SharecodeForm'])) {
+			$model->attributes = $_POST['SharecodeForm'];
+			$model->pl_id = $_POST['pl_id'];
+			$model->ct_id = $_POST['ct_id'];
+			$model->intro = $_POST['SharecodeForm']['intro'];
+			// var_dump($model->attributes);exit;
+			//服务器端先验证表单
+			if ($model->validate()) {
+				$cfumodel = new CodeFunction;
+				$cfrmodel = new CodeFragment;
+				$cfumodel->title = $_POST['SharecodeForm']['title'];
+				$cfumodel->pl_id = $_POST['pl_id'];
+				$cfumodel->ct_id = $_POST['ct_id'];
+				if ($cfumodel->save()) {		
+					$cfrmodel->cfu_id = $cfumodel->cfid; //保存成功或获取主键ID
+					//查询user_id
+					$username = Yii::app()->user->name;
+					$sql = "select uid from {{user}} where username=:username";
+					$dbCommand = Yii::app()->db->createCommand($sql);
+					$dbCommand->bindParam(':username', $username);
+					$user_id = $dbCommand->queryScalar();
+					$cfrmodel->user_id = $user_id;
+					$cfrmodel->intro = $_POST['SharecodeForm']['intro'];
+					$cfrmodel->code = $_POST['SharecodeForm']['code'];
+					if ($cfrmodel->save()) {
+						echo "success";exit;
+					} 
+				}		
+			}
 			
-		}
-		
+		}	
 		$this->render('shareCode', array(
 			'model'=>$model,
 			'pls'=>$pls

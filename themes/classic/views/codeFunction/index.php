@@ -12,7 +12,6 @@ if (isset($ct_name))
 ?>
 
 <!--代码片段开始-->
-<div class="column2_content">
 <!--代码语言开始-->
     <div class="codeCatalogs">
         <h2>请选择代码类型:</h2> 
@@ -42,4 +41,4 @@ if (isset($ct_name))
    </ul>
 </div>
 <!--列表结束-->
-</div><!--代码片段结束-->
+<!--代码片段结束-->

@@ -17,7 +17,7 @@
  * @property CodeFragment[] $codeFragments
  * @property CodeType $ct
  */
-class CodeFunction extends CActiveRecord
+class CodeFunction extends ZkpcActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.

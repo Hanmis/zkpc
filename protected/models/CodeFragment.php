@@ -20,7 +20,7 @@
  * @property User $user
  * @property CodeFunction $cfu
  */
-class CodeFragment extends CActiveRecord
+class CodeFragment extends ZkpcActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
