@@ -22,7 +22,7 @@
  * @property Node $node
  * @property User $user
  */
-class Topic extends CActiveRecord
+class Topic extends ZkpcActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -52,13 +52,10 @@ class Topic extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title', 'required'),
-			array('state, replies_count, last_reply_user_id, node_id, user_id', 'numerical', 'integerOnly'=>true),
-			array('title, source', 'length', 'max'=>64),
-			array('content, replied_at, created_at, updated_at', 'safe'),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('tid, title, content, state, replies_count, last_reply_user_id, replied_at, source, created_at, updated_at, node_id, user_id', 'safe', 'on'=>'search'),
+			array('node_id', 'required', 'message'=>'请选择分类'),
+			array('title', 'required', 'message'=>'标题不能为空'),
+			array('title', 'length', 'max'=>64, 'message'=>'标题过长'),
+			array('content', 'required','message'=>'内容不能为空'),		
 		);
 	}
 

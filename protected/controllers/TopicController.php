@@ -67,16 +67,23 @@ class TopicController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+		$sql = "select  sid, name from {{section}}";
+		$dbcommand = Yii::app()->db->createCommand($sql);
+		$sections = $dbcommand->queryAll();
+		$sections = CHtml::listData($sections, 'sid', 'name'); //转成一维数组
+		
 		if(isset($_POST['Topic']))
 		{
 			$model->attributes=$_POST['Topic'];
+			$model->node_id = $_POST['node_id'];
+			// var_dump($model->attributes);exit;
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->tid));
+				echo "success";exit;
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+			'sections'=>$sections,
 		));
 	}
 
@@ -172,5 +179,15 @@ class TopicController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+	
+	public function actionGetNode()
+	{
+		$section_id = (int)$_POST['section_id'];
+		$models = Node::model()->findAll(array('condition'=>'section_id=:section_id', 'params'=>array(':section_id'=>$section_id)));
+		$data = CHtml::listData($models, 'nid', 'name');
+		foreach ($data as $value => $name) {
+			echo CHtml::tag('option', array('value'=>$value), CHtml::encode($name),true);
+		}		
 	}
 }

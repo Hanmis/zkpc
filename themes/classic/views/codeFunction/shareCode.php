@@ -44,7 +44,7 @@ $this->breadcrumbs=array(
 			),
 			'prompt'=>'请选择编程语言'
 		));?>
-		<?php echo CHtml::dropDownList('ct_id','',array('类型'));?>
+		<?php echo CHtml::dropDownList('ct_id','',array());?>
     </div>
 	<div class="row">
 		<?php echo $form->labelEx($model,'一句话概述代码的用途：（例：使用 jsoup 从 HTML 中提取所有链接的例子）'); ?>

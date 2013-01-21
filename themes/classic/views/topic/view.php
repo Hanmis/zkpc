@@ -61,10 +61,12 @@ $this->breadcrumbs=array(
             <a class="social-share-button-douban" title="分享到豆瓣" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="douban" href="#"></a>
         </div><!--分享工具条结束-->
     </div><!--topic内容结束-->
-
-
 </div><!--topic内容结束-->
-
+<!--右边栏开始-->
+<div class="column2_sidebar">
+	       <h2 class="title">发布主题</h2>
+	       <a href="<?php echo Yii::app()->createUrl('Topic/create'); ?>">发布主题</a></br>
+</div><!--右边栏结束-->
 <!--topic回复内容开始-->
 <div class="column2_content box_gray">
     <!--回复数开始-->
