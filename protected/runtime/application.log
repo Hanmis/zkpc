@@ -6276,3 +6276,322 @@ Stack trace:
 REQUEST_URI=/zkpc/index.php?r=site/member
 HTTP_REFERER=http://localhost:81/zkpc/index.php?r=coolsite
 ---
+2013/01/15 13:11:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/01/15 13:12:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=topic/view&tid=1
+---
+2013/01/16 13:39:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=codeFunction
+---
+2013/01/16 13:39:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/wiki
+---
+2013/03/02 14:00:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=codeFunction
+---
+2013/03/02 14:00:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=coolsite
+---
+2013/03/02 14:00:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/wiki
+---
+2013/03/03 02:45:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/03/03 02:45:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/post
+---
+2013/03/03 02:45:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=coolsite
+---
+2013/03/03 05:15:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=topic/view&tid=1
+---
+2013/03/03 05:15:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=coolsite
+---
+2013/03/03 05:17:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/03/12 13:27:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/03/12 13:27:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/post
+---
+2013/03/12 13:27:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/wiki
+---
+2013/03/12 13:38:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/view
+---
+2013/03/12 13:38:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/post
+---
+2013/03/12 13:42:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=coolsite
+---
+2013/03/12 13:42:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/post
+---
+2013/03/12 13:43:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/post
+---
+2013/03/12 13:43:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=coolsite
+---
+2013/03/12 13:43:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/member
+---
+2013/03/12 13:43:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "member".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('member')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('member')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/member')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/member
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=codeFunction/shareCode
+---
+2013/03/12 13:43:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "wiki".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('wiki')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('wiki')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/wiki')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/wiki
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/member
+---
+2013/03/12 13:43:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/wiki
+---
+2013/03/12 13:44:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/
+---
+2013/03/12 13:44:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=site/post
+---
+2013/03/12 14:14:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in D:\wamp\web2\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\web2\framework\web\CController.php(271): CController->missingAction('post')
+#1 D:\wamp\web2\framework\web\CWebApplication.php(283): CController->run('post')
+#2 D:\wamp\web2\framework\web\CWebApplication.php(142): CWebApplication->runController('site/post')
+#3 D:\wamp\web2\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\web2\zkpc\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/zkpc/index.php?r=site/post
+HTTP_REFERER=http://localhost:81/zkpc/index.php?r=user/register
+---

@@ -15,7 +15,10 @@ $this->breadcrumbs=array(
     <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'register-form',
     'enableAjaxValidation'=>true,
-    'enableClientValidation'=>true,
+    'enableClientValidation'=>false,
+    'clientOptions'=>array(
+        'validateOnSubmit'=>true,
+    ),
 )); ?>
 
     <?php echo $form->errorSummary($model); ?>

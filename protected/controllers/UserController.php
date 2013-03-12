@@ -77,6 +77,7 @@ class UserController extends Controller
         // collect register input data
         if (isset($_POST['User']))
         {
+//            var_dump($_POST);exit;
             $model->attributes=$_POST['User'];
             $model->pwd_salt = uniqid('zkpc');
             $model->pwd = md5($model->pwd_salt.$_POST['User']['pwd']);

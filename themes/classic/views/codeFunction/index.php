@@ -20,9 +20,9 @@ if (isset($ct_name))
         	<?php for($i = 0; $i < $count; $i++):?>
             <li>
             	<?php if(isset($codeCatalogs[$i]['plid'])) {?>
-                <a href="<?echo Yii::app()->createUrl('CodeFunction', array('pl_id'=>$codeCatalogs[$i]['plid'], 'pl_name'=>$codeCatalogs[$i]['name'])); ?>"><?php echo $codeCatalogs[$i]['name']; ?></a>             
+                <a href="<?php echo Yii::app()->createUrl('CodeFunction', array('pl_id'=>$codeCatalogs[$i]['plid'], 'pl_name'=>$codeCatalogs[$i]['name'])); ?>"><?php echo $codeCatalogs[$i]['name']; ?></a>
                 <?php } else {?>
-                <a href="<?echo Yii::app()->createUrl('CodeFunction', array('ct_id'=>$codeCatalogs[$i]['ctid'], 'pl_id'=>$pl_id, 'pl_name'=>$pl_name, 'ct_name'=>$codeCatalogs[$i]['name'])); ?>"><?php echo $codeCatalogs[$i]['name']; ?></a>
+                <a href="<?php echo Yii::app()->createUrl('CodeFunction', array('ct_id'=>$codeCatalogs[$i]['ctid'], 'pl_id'=>$pl_id, 'pl_name'=>$pl_name, 'ct_name'=>$codeCatalogs[$i]['name'])); ?>"><?php echo $codeCatalogs[$i]['name']; ?></a>
                 <?php }?>
             </li>
             <?php endfor;?>
