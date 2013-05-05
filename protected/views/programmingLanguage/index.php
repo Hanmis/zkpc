@@ -1,4 +1,7 @@
 <?php
+/* @var $this ProgrammingLanguageController */
+/* @var $dataProvider CActiveDataProvider */
+
 $this->breadcrumbs=array(
 	'Programming Languages',
 );

@@ -1,4 +1,7 @@
 <?php
+/* @var $this ProgrammingLanguageController */
+/* @var $model ProgrammingLanguage */
+
 $this->breadcrumbs=array(
 	'Programming Languages'=>array('index'),
 	$model->name=>array('view','id'=>$model->plid),

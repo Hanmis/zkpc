@@ -12,8 +12,15 @@
        <?php echo $content;?>
        </div>
        <div class="column2_sidebar">
-	       <h2 class="title">分享代码</h2>
-	       <a href="<?php echo Yii::app()->createUrl('codeFunction/shareCode'); ?>">分享代码</a></br>
+               <h2 class="title">分享代码</h2>
+               <?php if(!Yii::app()->user->isGuest):?>
+               <a href="<?php echo Yii::app()->createUrl('codeFunction/shareCode'); ?>">分享代码</a></br>
+               <?php if ($this->getCodeFunctionId()):?>
+                    <a href="<?php echo Yii::app()->createUrl('codeFunction/shareCode', array('codeFunctionId'=>$this->getCodeFunctionId())); ?>">我有更好的代码</a>
+               <?php endif;?>
+           <?php else:?>
+               <a class="button green" href="<?php echo Yii::app()->createUrl('User/login')?>">会员登录后可以分享代码</a>
+           <?php endif?>
        </div>
 </div>
 

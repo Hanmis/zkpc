@@ -8,6 +8,7 @@ $this->breadcrumbs=array(
 	'注册',
 );
 ?>
+<div class="column2_content">
 <h1 class="title">注册</h1>
 <!--form begin-->
 <div class="form">
@@ -68,9 +69,15 @@ $this->breadcrumbs=array(
 
     <div class="row buttons">
         <label></label>
-        <?php echo CHtml::submitButton('提交',array('class'=>'buttonlink loginbutton')); ?>
+        <?php echo CHtml::submitButton('注册',array('class'=>'button orange')); ?>
     </div>
     <?php $this->endWidget(); ?>
 
 </div>
 <!-- form end-->
+</div>
+<div class="column2_sidebar">
+    <h2 class="title">已经有帐号了？</h2>
+    <a href="<?php echo Yii::app()->createUrl('user/login'); ?>">登录</a></br>
+    <a href="<?php echo Yii::app()->createUrl('user/findPwd'); ?>">忘记了密码？</a>
+</div>

@@ -1,3 +1,8 @@
+<?php
+/* @var $this ProgrammingLanguageController */
+/* @var $data ProgrammingLanguage */
+?>
+
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('plid')); ?>:</b>
@@ -14,6 +19,10 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('sort')); ?>:</b>
 	<?php echo CHtml::encode($data->sort); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('highlighted')); ?>:</b>
+	<?php echo CHtml::encode($data->highlighted); ?>
 	<br />
 
 

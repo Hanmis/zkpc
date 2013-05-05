@@ -85,6 +85,7 @@ class User extends ZkpcActiveRecord
 		return array(
             'replies' => array(self::HAS_MANY, 'Reply', 'user_id'),
             'topics' => array(self::HAS_MANY, 'Topic', 'user_id'),
+            'codefragment' => array(self::HAS_MANY, 'CodeFragment', 'user_id'),
 		);
 	}
 

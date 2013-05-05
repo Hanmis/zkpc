@@ -22,6 +22,8 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'rid',
+		'pid',
+		'path',
 		'content',
 		'state',
 		'source',

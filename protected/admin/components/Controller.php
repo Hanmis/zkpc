@@ -28,12 +28,13 @@ class Controller extends CController
 	
 	public function init()
 	{
+
 		$settins_json = Options::model()->find('option_name=:option_name', array(':option_name'=>'settings'));
 		$this->settings = json_decode($settins_json->attributes['option_value']);
 		
 		//初始化网站名称 
 		Yii::app()->name = $this->settings->site_name;
-		
+
 	}
 
 }

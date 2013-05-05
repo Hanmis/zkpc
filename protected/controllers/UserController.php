@@ -9,7 +9,7 @@
 class UserController extends Controller
 {
     public $layout='user_column'; //指定控制器所指向的布局文件
-    private $user_type; //判断跳转哪个页面的变量
+//    private $user_type; //判断跳转哪个页面的变量
 
     public function actions()
     {
@@ -39,7 +39,7 @@ class UserController extends Controller
     public function actionLogin()
     {
         $model=new LoginForm;
-        $this->setUserType('login');
+//        $this->setUserType('login');
         // if it is ajax validation request
         /*
         if (isset($_POST['ajax']) && $_POST['ajax']==='login-form')
@@ -66,7 +66,7 @@ class UserController extends Controller
     public function actionRegister()
     {
         $model = new User;
-        $this->setUserType('register');
+//        $this->setUserType('register');
 
         //if it is ajax validation request
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'register-form')
@@ -103,8 +103,30 @@ class UserController extends Controller
         } else {
             $uid = $_GET['uid'];
         }
+        $criteria = new CDbCriteria;
+        $criteria->addCondition('user_id='.$uid);
+        //帖子
+        $topic = new CActiveDataProvider('Topic',array(
+            'criteria'=>$criteria,
+            'sort'=>array(
+                'defaultOrder'=> 'created_at  DESC',
+            )
+        ));
+        //代码片段
+        $codeFragment = new CActiveDataProvider('CodeFragment',array(
+            'criteria'=>$criteria,
+            'sort'=>array(
+                'defaultOrder'=> 'created_at  DESC',
+            ),
+            'pagination'=>array(
+                'pageSize'=>20,
+            ),
+        ));
+//        var_dump($codeFragment);exit;
         $this->render('view',array(
             'model'=>$this->loadModel($uid),
+            'topic'=>$topic,
+            'codeFragment'=>$codeFragment,
         ));
     }
 	
@@ -208,7 +230,8 @@ class UserController extends Controller
 				}
 			}		
     	} else {
-			$model->attributes = $_POST['ResetPwdForm'];	
+			$model->attributes = $_POST['ResetPwdForm'];
+            $model->oldpwd = '111111';
 			//服务器端验证
 			if($model->validate()){
 				$pwd_salt = uniqid('zkpc');
@@ -233,4 +256,56 @@ class UserController extends Controller
 			$this->render('resetpwd', array('model'=>$model));		  		
     	}		
   	 }
+
+    public function actionUpdate() {
+
+        if(!isset($_GET['uid'])){
+            $uid = Yii::app()->user->id;
+        } else {
+            $uid = $_GET['uid'];
+        }
+
+        $model=User::model()->findByPk($uid);
+        $model2 = new ResetPwdForm;
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+
+        if(isset($_POST['User']))
+        {
+            $model->attributes=$_POST['User'];
+            $model->updated_at = new CDbExpression('NOW()');
+//            var_dump($model->attributes);exit;
+            if($model->update())
+                $this->redirect(array('view','id'=>$model->uid));
+        }
+
+        if(isset($_POST['ResetPwdForm']))
+        {
+            $model2->attributes = $_POST['ResetPwdForm'];
+            if ($model2->validate()) {
+//                $username = Yii::app()->user->name;
+                $username = 'hanmis';
+                $user = User::model()->find('LOWER(username)=?', array($username));
+//                echo md5($user->pwd_salt.$model2->oldpwd).'<br/>';
+//                echo $user->pwd;exit;
+                if (md5($user->pwd_salt.$model2->oldpwd) == $user->pwd) {
+                    $pwd_salt = uniqid('zkpc');
+                    $user->pwd = md5($pwd_salt.$model2->pwd);
+                    $user->pwd_salt = $pwd_salt;
+                    if ($user->update()) {
+                        Yii::app()->user->setFlash('success', '重设密码成功!');
+                    } else {
+                        throw new CHttpException(403, 'update exception');
+                    }
+                } else {
+                    Yii::app()->user->setFlash('error', '您输入的旧密码错误！');
+                    $this->redirect(Yii::app()->createUrl('user/Update'));
+                }
+            }
+        }
+        $this->render('update',array(
+            'model'=>$model,
+            'model2'=>$model2,
+        ));
+    }
 }

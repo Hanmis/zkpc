@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Topics'=>array('index'),
-	'Create',
+	'发布主题',
 );
 ?>
 <?php
@@ -21,7 +21,8 @@ $this->breadcrumbs=array(
                  	 ',
             ));
 ?>
-<h1>Create Topic</h1>
+<div class="column2_content">
+<h1 class="title">发布主题</h1>
 
 <div class="form">
 
@@ -30,40 +31,42 @@ $this->breadcrumbs=array(
 	'enableAjaxValidation'=>false,
 	'enableClientValidation'=>true,
 )); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
 	<?php echo $form->errorSummary($model); ?>
-    <div class="row">
-    	<label>请选择分类：</label><br/>
-        <?php echo CHtml::dropDownList('section_id', '', $sections, 
-           array(
-			'ajax'=>array(
-				'type'=>'POST',
-				'url'=>Yii::app()->createUrl('Topic/getNode'),
-				'update'=>'#node_id',
-				'data'=>array('section_id'=>'js: this.value')
-			),
-			'prompt'=>'请选择分类'
-		));?>
-		<?php echo CHtml::dropDownList('node_id','',array());?>
+    <div class="topic_row">
+    	<label>请选择节点分类：</label>
+        <div style="margin: 10px 0 0 0;">
+            <?php echo CHtml::dropDownList('section_id', '', $sections,
+               array(
+                'ajax'=>array(
+                    'type'=>'POST',
+                    'url'=>Yii::app()->createUrl('Topic/getNode'),
+                    'update'=>'#node_id',
+                    'data'=>array('section_id'=>'js: this.value')
+                ),
+                'prompt'=>'请选择分类'
+            ));?>
+            <?php echo CHtml::dropDownList('node_id','',array());?>
+        </div>
     </div>
-	<div class="row">
-		<?php echo $form->labelEx($model,'title'); ?>
-		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>64)); ?>
-		<?php echo $form->error($model,'title'); ?>
+	<div class="topic_row">
+		<?php echo $form->labelEx($model,'主题'); ?>
+		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>64, 'style'=>'width:400px; margin:10px 0 10px 0')); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'content'); ?>
-		<?php echo CHtml::activeTextArea($model,'content', array('rows'=>5,'cols'=>89,'style'=>'width: 630px;padding: 5px;')); ?>
-		<?php echo $form->error($model,'content'); ?>
+	<div class="topic_row">
+		<?php echo $form->labelEx($model,'内容'); ?>
+		<?php echo CHtml::activeTextArea($model,'content', array('rows'=>5,'cols'=>89,'style'=>'margin:10px 0 10px -5px; width: 630px;padding: 5px;')); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="topic_row buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? '发布' : '保存', array('class'=>'button orange')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+</div>
+<div class="column2_sidebar">
+    <h2 class="title">发布主题</h2>
+    <a href="<?php echo Yii::app()->createUrl('Topic/create'); ?>">发布主题</a></br>
+</div><!--右边栏结束-->

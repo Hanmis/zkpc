@@ -1,14 +1,19 @@
 <?php
 /* @var $this codeFragmentController */
 /* @var $model codeType */
-
 $this->breadcrumbs=array(
     '代码片段'=>array('index'),   
 );
-if (isset($pl_name))
-	$this->breadcrumbs=array('代码片段'=>array('index'), $pl_name); 
-if (isset($ct_name))
-	$this->breadcrumbs=array('代码片段'=>array('index'), $pl_name=>array('index&pl_id='.$pl_id.'&pl_name='.$pl_name), $ct_name);
+
+if (isset($pl_name)) {
+    $this->breadcrumbs=array('代码片段'=>array('index'), $pl_name);
+}
+
+if (isset($ct_name)) {
+    $this->breadcrumbs=array('代码片段'=>array('index'), $pl_name=>array('codeFunction/index&pl_id='.$pl_id.'&pl_name='.$pl_name), $ct_name);
+}
+
+
 ?>
 
 <!--代码片段开始-->

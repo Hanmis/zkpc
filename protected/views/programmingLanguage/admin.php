@@ -1,4 +1,7 @@
 <?php
+/* @var $this ProgrammingLanguageController */
+/* @var $model ProgrammingLanguage */
+
 $this->breadcrumbs=array(
 	'Programming Languages'=>array('index'),
 	'Manage',
@@ -15,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('programming-language-grid', {
+	$('#programming-language-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -46,6 +49,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'name',
 		'state',
 		'sort',
+		'highlighted',
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -1,3 +1,9 @@
+<?php
+/* @var $this ProgrammingLanguageController */
+/* @var $model ProgrammingLanguage */
+/* @var $form CActiveForm */
+?>
+
 <div class="wide form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -23,6 +29,11 @@
 	<div class="row">
 		<?php echo $form->label($model,'sort'); ?>
 		<?php echo $form->textField($model,'sort'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'highlighted'); ?>
+		<?php echo $form->textField($model,'highlighted',array('size'=>32,'maxlength'=>32)); ?>
 	</div>
 
 	<div class="row buttons">

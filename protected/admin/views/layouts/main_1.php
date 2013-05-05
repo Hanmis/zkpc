@@ -20,16 +20,16 @@
 
 <body>
 
-<div class="container" id="page">
+<div class="container" id="page" style="border: none">
     <div id="login-form" style="margin:0 auto; padding:60px 0; width:355px;" >
 	<?php echo $content; ?>
-    </div>    
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by 林锋工作室.
-		All Rights Reserved.
-		Powered by <a href="http://www.dlf5.net/" rel="external">dlf.net</a>.
+    </div>
+    <div id="footer">
+        Copyright &copy; <?php echo date('Y'); ?> by zhku.
+        All Rights Reserved.
+        Powered by <a href="http://www.yiiframework.com/" rel="external">yiiframework</a>.
         <script type="text/javascript" src="http://js.tongji.linezing.com/2975299/tongji.js"></script>
-	</div><!-- footer -->
+    </div><!-- footer -->
 
 </div><!-- page -->
 

@@ -1,4 +1,7 @@
 <?php
+/* @var $this ProgrammingLanguageController */
+/* @var $model ProgrammingLanguage */
+
 $this->breadcrumbs=array(
 	'Programming Languages'=>array('index'),
 	$model->name,
@@ -22,5 +25,6 @@ $this->menu=array(
 		'name',
 		'state',
 		'sort',
+		'highlighted',
 	),
 )); ?>

@@ -16,6 +16,18 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'pid'); ?>
+		<?php echo $form->textField($model,'pid'); ?>
+		<?php echo $form->error($model,'pid'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'path'); ?>
+		<?php echo $form->textField($model,'path',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->error($model,'path'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'content'); ?>
 		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'content'); ?>

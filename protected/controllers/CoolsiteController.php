@@ -23,7 +23,7 @@ class CoolsiteController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	/*
+
 	public function accessRules()
 	{
 		return array(
@@ -44,7 +44,7 @@ class CoolsiteController extends Controller
 			),
 		);
 	}
-	*/
+
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
@@ -66,15 +66,38 @@ class CoolsiteController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+        $sql = "select ctid, name from {{coolsite_type}} where state=1 order by sort asc";
+        $dbcommand = Yii::app()->db->createCommand($sql);
+        $coolsiteTypes = $dbcommand->queryAll();
+        $coolsiteTypes = CHtml::listData($coolsiteTypes, 'ctid', 'name'); //转成一维数组
 
 		if(isset($_POST['Coolsite']))
 		{
+            //查询user_id
+            $username = Yii::app()->user->name;
+            $sql = "select uid from {{user}} where username=:username";
+            $dbCommand = Yii::app()->db->createCommand($sql);
+            $dbCommand->bindParam(':username', $username);
+            $user_id = $dbCommand->queryScalar();
+            if (!$user_id)
+                return;
+            $model->user_id = $user_id;
+            $model->ct_id = $_POST['ct_id'];
 			$model->attributes=$_POST['Coolsite'];
+            if ($_POST['Coolsite']['favicon'] == null) {
+                $str = $_POST['Coolsite']['url'];
+                if ($str[strlen($str)-1] == '/')
+                    $model->favicon = $model->url.'favicon.ico';
+                else
+                    $model->favicon = $model->url.'/favicon.ico';
+            }
+            var_dump($model->attributes);exit;
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->cid));
+				$this->redirect(Yii::app()->createUrl('Coolsite/index'));
 		}
 
 		$this->render('create',array(
+            'coolsiteTypes'=>$coolsiteTypes,
 			'model'=>$model,
 		));
 	}
@@ -128,7 +151,7 @@ class CoolsiteController extends Controller
 	 */
     public function actionIndex()
     {
-        $coolsiteType = CoolsiteType::model()->findAll();
+        $coolsiteType = CoolsiteType::model()->findAll(array('order'=>'sort'));
         $this->render('index',array(
             'coolsiteType'=>$coolsiteType,
         ));
@@ -174,4 +197,25 @@ class CoolsiteController extends Controller
 			Yii::app()->end();
 		}
 	}
+    //防止重复提交的方法
+    private function preventDupicateSubmit($time = 10, $flag = '_is_sub', $warning='10s内不能提交两次') {
+        $session = Yii::app()->session;
+        $user_name = Yii::app()->user->name;
+        $sessionKey = $user_name.$flag;
+        if (isset($session[$sessionKey])) {
+            $first_submit_time = $session[$sessionKey];
+            $current_time = time();
+            if ($current_time - $first_submit_time < $time) {
+                $session[$sessionKey] = $current_time;
+                Yii::app()->user->setFlash('warning', $warning);
+                $this->redirect(Yii::app()->request->urlReferrer);
+            }else{
+                unset($session[$sessionKey]);//超过限制时间，释放session";
+            }
+        }
+        //第一次点击确认按钮时执行
+        if(!isset($session[$sessionKey])){
+            $session[$sessionKey] = time();
+        }
+    }
 }

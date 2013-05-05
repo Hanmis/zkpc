@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/index.css "/>
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/user.css "/>
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/topic.css"/>
+
+
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
     <script type="text/javascript">
     	//用户下拉框js
@@ -27,9 +29,10 @@
             document.getElementById("dropdown-menu").style.display="none";
         }
     </script>
+
 </head>
 
-<body onclick="moverUserMenu();">
+<body background="../../images/background.jpg" onclick="moverUserMenu();">
 
 <div>
     <!--头部导航开始-->
@@ -37,12 +40,14 @@
         <div class="top_nav_nei">
             <ul class="nav black">
                 <li><a href="<?php echo Yii::app()->request->baseUrl; ?>">网站logo</a></li>
-                <li><a href="<?php echo Yii::app()->createUrl('site/post'); ?>">社区</a></li>
-                <li><a href="<?php echo Yii::app()->createUrl('site/wiki'); ?>">Wiki</a></li>
+                <li><a href="<?php echo Yii::app()->createUrl('topic'); ?>">社区</a></li>
                 <li><a href="<?php echo Yii::app()->createUrl('coolsite')?>">酷站</a></li>
                 <li><a href="<?php echo Yii::app()->createUrl('site/member'); ?>">会员</a></li>
                 <li><a href="<?php echo Yii::app()->createUrl('codeFunction'); ?>">代码片段</a></li>
-                <li class="right"><a href="<?php echo Yii::app()->createUrl('user/register'); ?>">注册</a></li>
+                <li class="right">
+                    <?php if(Yii::app()->user->isGuest):?>
+                    <a href="<?php echo Yii::app()->createUrl('user/register'); ?>">注册</a></li>
+                    <?php endif;?>
                 <li class="right">
                     <?php if(Yii::app()->user->isGuest):?>
                         <a href="<?php echo Yii::app()->createUrl('user/login'); ?>">登录</a>
@@ -53,7 +58,7 @@
                     ))?>
                     <ul id="dropdown-menu">
                         <li><a href="<?php echo Yii::app()->createUrl('user/view')?>">我的主页</a></li>
-                        <li><a>记事本</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('user/update')?>">个人资料设置</a></li>
                         <li><a href="<?php echo Yii::app()->createUrl('user/logout')?>">注销</a></li>
                     </ul>
                     <?php endif;?>

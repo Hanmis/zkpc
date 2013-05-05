@@ -8,6 +8,7 @@ $this->breadcrumbs=array(
 	'找回密码',
 );
 ?>
+<div class="column2_content">
 <h1 class="title">找回密码</h1>
 <!--form begin-->
 <div class="form">
@@ -29,10 +30,11 @@ $this->breadcrumbs=array(
 
 	<div class="row buttons">
         <label></label>
-		<?php echo CHtml::submitButton('提交',array('class'=>'buttonlink loginbutton')); ?>
+		<?php echo CHtml::submitButton('提交',array('class'=>'button orange')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
 
 </div>
 <!-- form end-->
+</div>

@@ -45,7 +45,9 @@ class Coolsite extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, url', 'required'),
+			array('name', 'required', 'message'=>'请输入名称'),
+            array('url', 'required', 'message'=>'请输入网站地址'),
+            array('url', 'url', 'message'=>'请输入正确的网址'),
 			array('state, sort, user_id, ct_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>32),
 			array('favicon, url', 'length', 'max'=>64),

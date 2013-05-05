@@ -33,14 +33,13 @@ class SiteController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('logout'),
-				'users'=>array('@'),
+				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
 	}
-  
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -61,7 +60,7 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
-       
+
 		$model=new LoginForm;
 
 		// if it is ajax validation request
@@ -79,6 +78,7 @@ class SiteController extends Controller
 			if($model->validate() && $model->login())
 				$this->redirect(Yii::app()->user->returnUrl);
 		}
+
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}

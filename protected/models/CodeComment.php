@@ -5,6 +5,8 @@
  *
  * The followings are the available columns in table '{{code_comment}}':
  * @property integer $ccid
+ * @property integer $pid
+ * @property string $path
  * @property string $content
  * @property string $created_at
  * @property string $updated_at
@@ -15,7 +17,7 @@
  * @property User $user
  * @property CodeFragment $cfr
  */
-class CodeComment extends CActiveRecord
+class CodeComment extends ZkpcActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -43,11 +45,11 @@ class CodeComment extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cfr_id, user_id', 'numerical', 'integerOnly'=>true),
+//			array('cfr_id, user_id', 'numerical', 'pid', 'integerOnly'=>true),
 			array('content, created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('ccid, content, created_at, updated_at, cfr_id, user_id', 'safe', 'on'=>'search'),
+			array('ccid, pid, path, content, created_at, updated_at, cfr_id, user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,6 +73,8 @@ class CodeComment extends CActiveRecord
 	{
 		return array(
 			'ccid' => 'Ccid',
+            'pid' => 'Pid',
+            'path' => 'Path',
 			'content' => 'Content',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
@@ -91,6 +95,8 @@ class CodeComment extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('ccid',$this->ccid);
+        $criteria->compare('pid', $this->pid);
+        $criteria->compare('path', $this->path, true);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('updated_at',$this->updated_at,true);

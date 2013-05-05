@@ -5,6 +5,8 @@
  *
  * The followings are the available columns in table '{{reply}}':
  * @property integer $rid
+ * @property integer $pid
+ * @property string $path
  * @property string $content
  * @property integer $state
  * @property string $source
@@ -51,7 +53,7 @@ class Reply extends ZkpcActiveRecord
 			array('created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('rid, content, state, source, created_at, updated_at, topic_id, user_id', 'safe', 'on'=>'search'),
+			array('rid, pid, path, content, state, source, created_at, updated_at, topic_id, user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,6 +77,8 @@ class Reply extends ZkpcActiveRecord
 	{
 		return array(
 			'rid' => 'Rid',
+            'pid' => 'Pid',
+            'path' => 'Path',
 			'content' => 'Content',
 			'state' => 'State',
 			'source' => 'Source',
@@ -97,6 +101,8 @@ class Reply extends ZkpcActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('rid',$this->rid);
+        $criteria->compare('pid',$this->pid);
+        $criteria->compare('path',$this->path,true);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('state',$this->state);
 		$criteria->compare('source',$this->source,true);

@@ -38,11 +38,40 @@ class SiteController extends Controller
                         ->limit(10)
                         ->offset(0)
                         ->queryAll();
-        $sections = Section::model()->findAll();
-//        var_dump($sections[0]->nodes[1]->name);exit;
+        $love_topics = Yii::app()->db->createCommand()
+                        ->select('tid, title, love_count, user_id, {{user}}.email')
+                        ->from('{{topic}}')
+                        ->join('{{user}}', '{{topic}}.user_id = {{user}}.uid')
+                        ->where('{{topic}}.state=:state', array(':state'=>Topic::STATUS_PUBLISHED))
+                        ->order('love_count desc')
+                        ->limit(10)
+                        ->offset(0)
+                        ->queryAll();
+        $sections = Yii::app()->db->createCommand()
+                        ->select('sid, name')
+                        ->from('{{section}}')
+                        ->where('{{section}}.state=:state', array(':state'=>Topic::STATUS_PUBLISHED))
+                        ->order('sort asc')
+                        ->queryAll();
+        $nodes = Yii::app()->db->createCommand()
+                        ->select('nid, name, section_id')
+                        ->from('{{node}}')
+                        ->where('{{node}}.state=:state', array(':state'=>Topic::STATUS_PUBLISHED))
+                        ->order('sort asc')
+                        ->queryAll();
+        $languages = Yii::app()->db->createCommand()
+                        ->select('plid, name')
+                        ->from('{{programming_language}}')
+                        ->where('{{programming_language}}.state=:state', array(':state'=>Topic::STATUS_PUBLISHED))
+                        ->order('sort asc')
+                        ->queryAll();
+//        var_dump($nodes);exit;
 		$this->render('index', array(
             'hot_topics' => $hot_topics,
-            'sections' => $sections
+            'love_topics'=>$love_topics,
+            'sections' => $sections,
+            'nodes'=>$nodes,
+            'languages'=> $languages
         ));
 	}
 
@@ -120,4 +149,17 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+    public function actionMember()
+    {
+        $users = Yii::app()->db->createCommand()
+            ->select('uid, name, avatar_file_name, email')
+            ->from('{{user}}')
+            ->limit(100)
+            ->offset(0)
+            ->queryAll();
+        $this->render('member', array(
+            'users' => $users
+        ));
+    }
 }

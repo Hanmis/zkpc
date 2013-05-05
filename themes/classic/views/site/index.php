@@ -9,7 +9,7 @@
                 <?php for($i=0; $i<count($hot_topics); $i++):?>
                 <li>
                     <a href="#" class="img_a">
-                        <img class="uface" style="width:16px;height:16px;" src=<?php echo User::get_gravatar($hot_topics[$i]['email'], 16)?> alt="">
+                        <img class="uface" style="width:16px;height:16px;" src="<?php echo User::get_gravatar($hot_topics[$i]['email'], 16)?>">
                     </a>
                     <a href="<?php echo Yii::app()->createUrl('topic/view', array('tid'=>$hot_topics[$i]['tid']));?>"><?php  echo $hot_topics[$i]['title']?></a>
                     <span class="count"><?php echo $hot_topics[$i]['replies_count']?> 回复</span>
@@ -22,20 +22,15 @@
         <div class="high_replies_topics box">
             <h2 class="title">高分帖子</h2>
             <ul>
+                <?php for($i=0; $i<count($love_topics); $i++):?>
                 <li>
                     <a href="/fredwu" class="img_a">
-                        <img class="uface" style="width:16px;height:16px;" src="http://ruby-china.org/avatar/2735068c913a072744a799e3c0833b7b.png?s=16&d=404" alt="2735068c913a072744a799e3c0833b7b">
+                        <img class="uface" style="width:16px;height:16px;" src="<?php echo User::get_gravatar($love_topics[$i]['email'], 16)?>">
                     </a>
-                    <a href="/topics/6859">我的演讲稿 追加未删节完整版</a>
-                    <span class="count">29 人喜欢</span>
+                    <a href="<?php echo Yii::app()->createUrl('topic/view', array('tid'=>$love_topics[$i]['tid']));?>"><?php  echo $love_topics[$i]['title']?></a>
+                    <span class="count"><?php echo $love_topics[$i]['love_count']?> 人喜欢</span>
                 </li>
-                <li>
-                    <a href="/xdite" class="img_a">
-                        <img class="uface" style="width:16px;height:16px;" src="http://ruby-china.org/avatar/19e786a2a74377ff6e052d87fd8d1fa8.png?s=16&d=404" alt="19e786a2a74377ff6e052d87fd8d1fa8">
-                    </a>
-                    <a href="/topics/6886">我的slide: 最佳實踐如何變成了最慢實踐</a>
-                    <span class="count">19 人喜欢</span>
-                </li>
+                <?php endfor;?>
             </ul>
         </div>
         <!--高分帖子结束-->
@@ -47,10 +42,12 @@
         <ul>
             <?php for($i=0; $i<count($sections); $i++):?>
             <li>
-                <label><?php echo $sections[$i]->name?></label>
+                <label><?php echo $sections[$i]['name'];?></label>
                     <span class="nodes">
-                        <?php for($j=0; $j<count($sections[$i]->nodes); $j++):?>
-                            <a href="#"><?php echo $sections[$i]->nodes[$j]->name?></a>
+                        <?php for($j=0; $j<count($nodes); $j++):?>
+                            <?php if($nodes[$j]['section_id'] == $sections[$i]['sid']):?>
+                                <a href="<?php echo Yii::app()->createUrl('Topic/indexNode', array('node_id'=>$nodes[$j]['nid']));?>"><?php echo $nodes[$j]['name'];?></a>
+                            <?php endif;?>
                         <?php endfor;?>
                     </span>
             </li>
@@ -60,11 +57,11 @@
     <!--首页讨论节点分类导航结束-->
     <!--首页热门代码分享开始-->
     <div class="hotcode box">
-        <h2 class="title">热门代码分享</h2>
+        <h2 class="title">热门代码片段</h2>
         <ul>
-            <li><a href="/users/city/%E5%8C%97%E4%BA%AC">JAVA</a></li>
-            <li><a href="/users/city/%E5%8C%97%E4%BA%AC">PHP</a></li>
-            <li> <a href="/users/city/%E5%8C%97%E4%BA%AC">C++</a></li>
+            <?php for($i=0; $i<count($languages); $i++):?>
+            <li><a href="<?php echo Yii::app()->createUrl('CodeFunction', array('pl_id'=>$languages[$i]['plid'], 'pl_name'=>$languages[$i]['name'])); ?>"><?php echo $languages[$i]['name'];?></a></li>
+            <?php endfor;?>
         </ul>
     </div>
     <!--首页热门代码分享结束-->

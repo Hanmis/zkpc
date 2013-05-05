@@ -8,6 +8,7 @@ $this->breadcrumbs=array(
 	'登录',
 );
 ?>
+<div class="column2_content">
 <h1 class="title">登录</h1>
 <!--form begin-->
 <div class="form">
@@ -40,9 +41,18 @@ $this->breadcrumbs=array(
 
 	<div class="row buttons">
         <label></label>
-		<?php echo CHtml::submitButton('登录',array('class'=>'buttonlink loginbutton')); ?>
+		<?php echo CHtml::submitButton('登录',array('class'=>'button orange')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
 </div>
 <!-- form end-->
+</div>
+<div class="column2_sidebar">
+    <h2 class="title">还没有帐号？</h2>
+    <a href="<?php echo Yii::app()->createUrl('user/register'); ?>">注册</a></br>
+    <a href="<?php echo Yii::app()->createUrl('user/findPwd'); ?>">忘记了密码？</a>
+</div>
+<!--<div class="column2_sidebar">-->
+<!--    <h2 class="title">用其他平台帐号登录</h2>-->
+<!--</div>-->

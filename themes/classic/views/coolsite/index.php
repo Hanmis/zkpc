@@ -27,3 +27,12 @@ $this->breadcrumbs=array(
 </div>
 <?php endfor;?>
 <!--酷站结束-->
+
+<div class="coolsite">
+    <?php if(!Yii::app()->user->isGuest):?>
+    <a class="button orange" href="<?php echo Yii::app()->createUrl('Coolsite/create')?>">提交酷站</a>
+    <?php else:?>
+    <a class="button green" href="<?php echo Yii::app()->createUrl('User/login')?>">会员登录后可以提交酷站哟</a>
+    <?php endif?>
+
+</div>

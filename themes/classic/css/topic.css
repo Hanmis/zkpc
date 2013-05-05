@@ -75,3 +75,108 @@
     line-height: 160%;
     margin-bottom: 10px;
 }
+
+.container {
+    /*margin: 20px 0px 0px 10%;*/
+}
+textarea {
+    height: 100px;
+    width: 80%;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    padding: 5px 8px;
+    outline: 0 none;
+}
+/*topic/index*/
+#node_info {
+    border-bottom: 1px solid #DDDDDD;
+    color: #999999;
+    margin: 0 -10px;
+    padding: 0 10px 6px;
+}
+#node_info ul {
+    list-style: none;
+    float: right;
+}
+#node_info ul li {
+    float: left;
+}
+.topics .topic_line {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #DDDDDD;
+    margin: 0 -10px;
+    padding: 10px 0;
+    vertical-align: top;
+}
+.topic_line .avatar {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.topic_line .right_info {
+
+}
+.right_replies_count {
+    float: right;
+}
+.right_replies_count a {
+    background-color: #1C7FDB;
+    border-radius: 80px 80px 80px 80px;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 12px;
+    margin: 18px 12px 0 0;
+    padding: 2px 10px;
+    text-decoration: none;
+}
+.right_replies_count a:hover {
+    background-color: #1DC115;
+}
+.node {
+    background-color: #F5F5F5;
+    color: #778087;
+    padding: 1px 5px;
+    text-decoration: none;
+}
+.info {
+    color: #BBBBBB;
+    font-size: 12px;
+}
+.info em {
+    font-style: normal;
+}
+.info a {
+    color: #BBBBBB;
+    text-decoration: underline;
+}
+i.icon {
+    margin-bottom: -1px;
+}
+.icon {
+    display: inline-block;
+    transition-duration: 0.5s;
+    transition-property: background-position;
+}
+.small_liked {
+    background: url("../images/small.png") no-repeat scroll 0 -96px transparent;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+}
+.small_like {
+    background: url("../images/small.png") no-repeat scroll 0 -84px transparent;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+}
+.link_font_color {
+    color: #ff62a4;
+}
+.link_font_color:hover {
+    color: #ff62a4;
+}
+.summary {
+    display: none;
+}
+

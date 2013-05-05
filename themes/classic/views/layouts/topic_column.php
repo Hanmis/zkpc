@@ -7,7 +7,7 @@
 <p></p>
 <!--topic左边列开始-->
 <div class="container">
-        <?php echo $content;?>
+     <?php echo $content;?>
 </div>
 <!--topic左边列结束-->
 <?php $this->endContent(); ?>

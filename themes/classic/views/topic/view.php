@@ -6,109 +6,232 @@ $this->breadcrumbs=array(
 	'Topics'=>array('index'),
 	$model->title,
 );
+//var_dump($model->replies[0]['user_id']);exit;
+//将$model->replies转化为一般数组
+function genCommentArr ($arr) {
+    $dataArr = array();
+    $len = count($arr);
+    for ($i=0; $i<$len; $i++) {
+        $dataArr[$i]['rid'] = $arr[$i]['rid'];
+        $dataArr[$i]['pid'] = $arr[$i]['pid'];
+        $dataArr[$i]['topic_id'] = $arr[$i]['topic_id'];
+        $dataArr[$i]['path'] = $arr[$i]['path'];
+        $dataArr[$i]['user_id'] = $arr[$i]['user_id'];
+        $dataArr[$i]['user'] = $arr[$i]->user->name;
+        $dataArr[$i]['user_email'] = $arr[$i]->user->email;
+        $dataArr[$i]['content'] = $arr[$i]['content'];
+        $dataArr[$i]['created_at'] = $arr[$i]['created_at'];
+    }
+    return $dataArr;
+}
+//var_dump(genCommentArr($model->replies));exit
 ?>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/code/viewcode.css"/>
 <!--topic内容开始-->
 <div class="column2_content">
     <!--topic头部开始-->
     <div class="topic_info">
         <div class="topic_avatar_large">
             <a href="#">
-                <img class="topic_user_img" src="" alt="">
+                <img class="topic_user_img" src="<?php echo User::get_gravatar($model->user->email);?>" alt="">
             </a>
         </div>
-        <h1 class="topic_title"><strong>系统批量吐槽一下各种编辑器</strong></h1>
+        <h1 class="topic_title"><strong><?php echo $model->title;?></strong></h1>
         <div class="topic_info_leader">
-            <a class="topic_node" href="">工具控</a>
+            <a class="topic_node" href=""><?php echo $model->node->name;?></a>
             •
-            <a data-name="Zete" href="">luikore</a>
+            <a href="<?php echo Yii::app()->createUrl('user/view', array('uid'=>$model->user->uid));?>"><?php echo $model->user->name;?></a>
             •于
-            <abbr class="topic_timeago" title="2012-12-29T19:34:11+08:00">5天前</abbr>
+            <abbr class="topic_timeago" title="<?php echo $model->created_at;?>"><?php echo Helper::datetime_diff($model->created_at);?></abbr>
             发布•最后由
-            <a data-name="YangZX" href="">YangZX</a>
+            <a href="<?php echo Yii::app()->createUrl('user/view', array('uid'=>$model->last_reply_user_id));?>"><?php print_r(Helper::getNameById($model->last_reply_user_id));?></a>
             于
-            <abbr class="topic_timeago" title="2012-12-29T19:34:11+08:00">3小时前</abbr>
-            回复•1165次阅读
+            <abbr class="topic_timeago" title="<?php echo $model->replied_at;?>"><?php echo Helper::datetime_diff($model->replied_at);?></abbr>
+            回复
+<!--            •1165次阅读-->
         </div>
     </div><!--topic头部结束-->
     <!--topic内容开始-->
     <div class="topic_content">
-        <p>虽然代码填坑中, 但忍不住又发一帖...</p>
-        <p>vim 高亮文件种类非常丰富, 键盘操作设计非常爱护手指, 可惜和操作系统的默认文本编辑习惯不一样, 在命令行用不了某些 cmd 键的绑定, 它是模式编辑器, 但模式判定和编辑的文档内容无关, 另外没有自带的 debug 接口也是缺点之一. vimscript 虽然简单但还是三天不用就会忘...</p>
-        <p>emacs 是最早支持 context 和 mode 的编辑器之一, 命令都有对应函数的, 没有 vim 那种绑了键那个东西就不再是那个东西的顾虑. 有 etags 跳转浏览, 结构化编辑 (haskell 包), 二相渲染等高端能力. 对 latex 的编辑支持最完善. 但键盘操作有点费手指, 用的包多了载入速度就会略慢. elisp 和很多 lisp 方言一样: 括号多...</p>
-        <p>这里顺便吐槽一下括号省不掉的根本原因: 换行没有语义, 没有带运算符优先级的中缀表达式 (可以用 infix macro 但还是略难受), clojure 可以把一些圆括号转换成方括号花括号什么的, 但是括号总量几乎没变.</p>
-        <p>vimscript 和 elisp 都不是通用编程语言, 没有广泛的库支持...</p>
-        <hr>
-        <p>emacs 影响了很多编辑器, 例如 scintilla. scite, notepad++, ultraedit, komodo, code::block ... 都是基于 scintilla 的, notepad++之类就是在 scintilla 外面包了层皮而已... 很多基于 qt / wxwidget / gtk / fox 的编辑器/IDE也都用了 scintilla. scintilla 的 split buffer (文本存储) 和 line marker (增量着色和 lexer 状态) 就是参照 emacs 设计的. 但 scintilla 基于 cocoa 的版本是收费的, 基于 gtk 的版本在 mac 上基本没有可用性... </p>
-        <p>
+        <?php echo $model->content;?>
+    </div><!--topic内容结束-->
+    <div>
+        <!--分享工具条开始-->
+        <DIV class=bshare-custom style="float: right;">
+            <A class=bshare-qzone title=分享到QQ空间></A>
+            <A class=bshare-sinaminiblog title=分享到新浪微博></A>
+            <A class=bshare-renren title=分享到人人网></A>
+            <A class=bshare-qqmb title=分享到腾讯微博></A>
+            <A class=bshare-neteasemb title=分享到网易微博></A>
+            <A class="bshare-more bshare-more-icon more-style-addthis" title=更多平台></A>
+            <SPAN class="BSHARE_COUNT bshare-share-count">0</SPAN></DIV>
+        <SCRIPT type=text/javascript charset=utf-8 src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></SCRIPT>
+        <SCRIPT type=text/javascript charset=utf-8 src="http://static.bshare.cn/b/bshareC0.js"></SCRIPT><!--分享工具条结束-->
+
         <!--关注喜欢开始-->
         <div class="tools pull-right">
-            <a rel="twipsy" onclick="return Topics.follow(this);" data-id="7803" data-followed="false" href="#" data-original-title="">
-                <i class="icon small_follow"></i>
-                关注
+            <a class="likeable" onclick="clickLove()" rel="twipsy" data-type="Topic" data-state="" data-id="7803" data-count="5" href="javascript:void(0)" data-original-title="喜欢">
+                <i id='loveImg'<?php
+                        $cookie = Yii::app()->request->getCookies();
+                        if (!isset($cookie['loveCookie'.$model->tid])):
+                   ?>class="icon small_like"
+                   <?php else:?>class="icon small_liked"
+                    <?php endif;?>
+                ></i>
+                <span><i id='loveNum'><?php echo $model->love_count;?></i>人喜欢</span>
             </a>
-            <a class="likeable" rel="twipsy" onclick="return App.likeable(this);" data-type="Topic" data-state="" data-id="7803" data-count="5" href="#" data-original-title="喜欢">
-                <i class="icon small_like"></i>
-                <span>5人喜欢</span>
-            </a>
-            <a class="icon small_bookmark" rel="twipsy" onclick="return Topics.favorite(this);" data-id="7803" href="#" data-original-title="收藏"></a>
         </div><!--关注喜欢结束-->
-        <!--分享工具条开始-->
-        <div class="social-share-button" data-url="" data-img="" data-title="系统批量吐槽一下各种编辑器 via: @ruby_china ">
-            <a class="social-share-button-twitter" title="分享到Twitter" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="twitter" href="#"></a>
-            <a class="social-share-button-facebook" title="分享到Facebook" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="facebook" href="#"></a>
-            <a class="social-share-button-google_plus" title="分享到Google+" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="google_plus" href="#"></a>
-            <a class="social-share-button-weibo" title="分享到新浪微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="weibo" href="#"></a>
-            <a class="social-share-button-douban" title="分享到豆瓣" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="douban" href="#"></a>
-        </div><!--分享工具条结束-->
-    </div><!--topic内容结束-->
+    </div>
 </div><!--topic内容结束-->
 <!--右边栏开始-->
 <div class="column2_sidebar">
-	       <h2 class="title">发布主题</h2>
-	       <a href="<?php echo Yii::app()->createUrl('Topic/create'); ?>">发布主题</a></br>
+    <h2 class="title">发布主题</h2>
+    <?php if(!Yii::app()->user->isGuest):?>
+    <a href="<?php echo Yii::app()->createUrl('Topic/create'); ?>">发布主题</a></br>
+    <?php else:?>
+    <a class="button green" href="<?php echo Yii::app()->createUrl('User/login')?>">会员登录后可以发布主题</a>
+    <?php endif?>
 </div><!--右边栏结束-->
 <!--topic回复内容开始-->
-<div class="column2_content box_gray">
+<div class="column2_content">
     <!--回复数开始-->
     <div class="replies_total">
         共收到
-        <b>43</b>
+        <b><?php echo $nums = count($model->replies);?></b>
         条回复
     </div><!--回复数结束-->
+    <?php
+        $commentArr=genCommentArr($model->replies);
+        $newData = CommentHelper::genNewData($commentArr);
+    ?>
     <!--回复条目开始-->
     <div class="replies_items">
-        <div class="replies_reply">
-            <!--回复人头像开始-->
-            <div class="reply_user_img">
-                <a href="">
-                    <img class="uface" style="width:48px;height:48px;" src="http://l.ruby-china.org/user/large_avatar/4801.jpeg" alt="4801">
+        <?php foreach ($newData as $k => $rows) : ?>
+        <?php foreach($rows as $j=>$row): ?>
+            <div class = "level lv_<?php echo $row['lv']?>">
+                <a href="<?php echo Yii::app()->createUrl('user/view', array('uid'=>$row['user_id']));?>">
+                    <img class="" style=" float:left; margin: 2px 5px 2px 2px; width:30px; height: 30px;" src="<?php echo User::get_gravatar( $row['user_email']);?>" alt="">
                 </a>
-            </div><!--回复人头像结束-->
-            <div class="reply_infos">
-                <div class="reply_info">
-                    <span class="name">
-                        <a data-name="Hilbert" href="/hilbert">hilbert</a>
-                        1楼,
-                        <abbr class="timeago" title="2012-12-24T03:12:22+08:00">5天前</abbr>
-                        </span>
-                    <span class="opts">
-                        <a class="likeable" rel="twipsy" onclick="return App.likeable(this);" data-type="Reply" data-state="" data-id="75010" data-count="0" href="#" data-original-title="喜欢">
-                            <i class="icon small_like"></i>
-                            <span>喜欢</span>
-                        </a>
-                        <a class="edit icon small_edit" title="修改回帖" data-uid="4801" href="/topics/7803/replies/75010/edit"></a>
-                        <a class="icon small_reply" title="回复此楼" data-login="hilbert" data-floor="1" href="#"></a>
-                    </span>
-                </div>
-                <div class="reply_content">
-                    Sublime好，相当于变相免费，界面也不错，能把粉色嫩系颜色配得好看，我还是第一次见，所以我用了好久都没换默认皮肤，速度好像比TM快，是TM的接班人啊
-                </div>
-                <span class="opts"> </span>
+                <a href="<?php echo Yii::app()->createUrl('user/view', array('uid'=>$row['user_id']));?>">
+                    <?php echo $row['user'] ?>
+                </a>
+                 •于<?php echo Helper::datetime_diff($row['created_at']);?>
+                <?php if ($j ==0) : ?>•说 :
+                    <?php if(!Yii::app()->user->isGuest):?>
+                        <div class="reply_ref" style="float: right;"><label class="button gray verysmall" onclick="showCommentForm(<?php echo "'".$k.$j."'";?>);">回复</label></div>
+                    <?php endif?>
+                <?php else :?>•回复#
+                    <?php if(!Yii::app()->user->isGuest):?>
+                        <div class="reply_ref" style="float: right;"><label class="button gray verysmall" onclick="showCommentForm(<?php echo "'".$k.$j."'";?>);">回复</label></div>
+                    <?php endif?>
+                <div class = "re_comment">
+                    <?php
+                    echo CommentHelper::getAuthor2($row['pid'],$rows)
+                    ?>
+                    :</div>
+                <?php endif ?>
+                <div class = "comment_content"><?php echo $row['content'] ?></div>
+                <form class="re_comment_form" id="re_comment_form<?php echo $k.$j;?>" action="<?php echo Yii::app()->createUrl('Topic/Reply')?>" method="post" style="display: none;" onsubmit="return checkReComment(<?php echo "'".$k.$j."'";?>);">
+                    <textarea rows="5" cols="200" name='content' id='re_comment<?php echo $k.$j;?>'></textarea>
+                    <input type="hidden" value="<?php echo $row['rid'];?>" name="pid">
+                    <input type="hidden" value="<?php echo $row['path'];?>" name="path">
+                    <input type="hidden" name="topic_id" value="<?php echo $model->tid;?>">
+                    <br/>
+                    <input type="submit" class="button blue small" value="回复">&nbsp;<input type="button" class="button blue small" value="关闭" onclick="closeCommentForm(<?php echo "'".$k.$j."'";?>);">
+                </form>
             </div>
-        </div>
+            <?php endforeach; ?>
+        <?php endforeach; ?>
     </div><!--回复条目结束-->
 </div><!--topic回复内容结束-->
+
+<!--回复输入开始-->
 <div class="column2_content">
+    <?php if(!Yii::app()->user->isGuest):?>
+       <form action="<?php echo  Yii::app()->createUrl('Topic/Reply');?>" method="post" onsubmit="return checkReply();">
+            <textarea name="content" id="reply"></textarea><br/>
+            <input type="submit" class="button blue"  value="回复">
+            <input type="hidden" name="topic_id" value="<?php echo $model->tid;?>">
+       </form>
+    <?php else:?>
+    <a class="button green" href="<?php echo Yii::app()->createUrl('User/login')?>">会员登录后可以回复</a>
+    <?php endif?>
+</div><!--回复输入结束-->
+
+<script type="text/javascript">
+   var url = '<?php echo Yii::app()->createUrl('Topic/love');?>';
+   var tid = <?php echo $model->tid;?>;
+   function clickLove() {
+       sendRequest('tid='+tid);
+       var loveImg = document.getElementById('loveImg');
+       if (loveImg.className == 'icon small_like')
+           loveImg.className = 'icon small_liked';
+       else
+           loveImg.className = 'icon small_like';
+   }
+   function createXMLHttpRequest() {
+       if (window.ActiveXObject) {
+           xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+       } else if (window.XMLHttpRequest) {
+           xmlHttp = new XMLHttpRequest();
+       }
+   }
+   //data: "first_name=Bill&lname=Gates"
+   function sendRequest(data) {
+       createXMLHttpRequest();
+       xmlHttp.open("POST", url, true);
+       xmlHttp.onreadystatechange = responseResults;
+       xmlHttp.setRequestHeader("Content-Type",
+           "application/x-www-form-urlencoded;");
+       xmlHttp.send(data);
+   }
+   function responseResults() {
+       if (xmlHttp.readyState == 4) {
+           if (xmlHttp.status == 200) {
+               if(xmlHttp.responseText.length>0){
+                   var lovenum = document.getElementById('loveNum');
+                   lovenum.innerHTML = xmlHttp.responseText;
+               }
+           } else {
+               alert('请求失败');
+           }
+       }
+   }
+    function checkReply() {
+        var reply = document.getElementById('reply').value;
+        if ('' == reply || reply.length == 0) {
+            alert('回复不能为空');
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function checkReComment(kj) {
+        var comment = document.getElementById('re_comment'+kj).value;
+        if ('' == comment || comment.length == 0) {
+            alert('回复不能为空！');
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function showCommentForm(kj) {
+        var forms = document.getElementsByClassName('re_comment_form');
+        for (var i=0; i<forms.length; i++) {
+            if (forms[i].style.display == 'inline') {
+                forms[i].style.display = 'none';
+            }
+        }
+        var form = document.getElementById('re_comment_form'+kj);
+        form.style.display = 'inline';
+    }
+
+    function closeCommentForm(kj) {
+        var form = document.getElementById('re_comment_form'+kj);
+        form.style.display = 'none';
+    }
 
 
-</div>
+</script>

@@ -23,7 +23,7 @@ class CodeCommentController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	 /*
+
 	public function accessRules()
 	{
 		return array(
@@ -44,7 +44,7 @@ class CodeCommentController extends Controller
 			),
 		);
 	}
-*/
+
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed

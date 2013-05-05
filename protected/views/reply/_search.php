@@ -17,6 +17,16 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'pid'); ?>
+		<?php echo $form->textField($model,'pid'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'path'); ?>
+		<?php echo $form->textField($model,'path',array('size'=>60,'maxlength'=>128)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'content'); ?>
 		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
 	</div>

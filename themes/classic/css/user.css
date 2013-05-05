@@ -21,3 +21,8 @@ div.form .errorMessage {
 div.form input {
     margin-left: 30px;
 }
+
+.userinfo {
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}

@@ -8,6 +8,7 @@
  * @property string $name
  * @property integer $state
  * @property integer $sort
+ * @property string $highlighted
  *
  * The followings are the available model relations:
  * @property CodeType[] $codeTypes
@@ -40,12 +41,13 @@ class ProgrammingLanguage extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
+			array('name, highlighted', 'required'),
 			array('state, sort', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>16),
+			array('highlighted', 'length', 'max'=>32),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('plid, name, state, sort', 'safe', 'on'=>'search'),
+			array('plid, name, state, sort, highlighted', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,6 +73,7 @@ class ProgrammingLanguage extends CActiveRecord
 			'name' => 'Name',
 			'state' => 'State',
 			'sort' => 'Sort',
+			'highlighted' => 'Highlighted',
 		);
 	}
 
@@ -89,6 +92,7 @@ class ProgrammingLanguage extends CActiveRecord
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('state',$this->state);
 		$criteria->compare('sort',$this->sort);
+		$criteria->compare('highlighted',$this->highlighted,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

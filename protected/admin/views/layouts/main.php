@@ -15,25 +15,37 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<title><?php echo '后台管理系统' ?></title>
 </head>
 
 <body>
 
 <div class="container" id="page">
 
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+<!--	<div id="header">-->
+<!--		<div id="logo">--><?php //echo CHtml::encode(Yii::app()->name); ?><!--</div>-->
+<!--	</div><!-- header -->
 
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'编程社区后台管理系统', 'url'=>array('/admin/index')),
+				array('label'=>'节点类型', 'url'=>array('/Section')),
+                array('label'=>'节点', 'url'=>array('/Node')),
+                array('label'=>'话题', 'url'=>array('/Topic')),
+                array('label'=>'话题回复', 'url'=>array('/Reply')),
+                array('label'=>'编程语言', 'url'=>array('/ProgrammingLanguage')),
+                array('label'=>'代码类型', 'url'=>array('/CodeType')),
+                array('label'=>'代码功能', 'url'=>array('/CodeFunction')),
+                array('label'=>'代码片段', 'url'=>array('/CodeFragment')),
+                array('label'=>'代码评论', 'url'=>array('/CodeComment')),
+                array('label'=>'酷站类型', 'url'=>array('/CoolsiteType')),
+                array('label'=>'酷站', 'url'=>array('/Coolsite')),
+                array('label'=>'会员', 'url'=>array('/User')),
+
+//				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'注销 ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+
 			),
 		)); ?>
 	</div><!-- mainmenu -->

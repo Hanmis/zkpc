@@ -1,11 +1,11 @@
 ﻿/*
 功能：滑动门（手风琴）效果封装类
-作者：老胡
+作者：
 日期：2010-06-29
 */
 function __AccordionClass()
 {
-    this.isMultiExpand = false; // 是否允许多个同时展开
+    this.isMultiExpand = true; // 是否允许多个同时展开
     this.expandClassName ='';  // 内容展开后的，头类名称
     this.foldedClassName ='';  // 内容折叠后的，头类名称
     this.speedTime = 5 ;       // 展开折叠速度 ，隔多少毫秒执行一次

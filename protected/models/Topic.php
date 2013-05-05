@@ -9,6 +9,7 @@
  * @property string $content
  * @property integer $state
  * @property integer $replies_count
+ * @property integer $love_count
  * @property integer $last_reply_user_id
  * @property string $replied_at
  * @property string $source
@@ -84,6 +85,7 @@ class Topic extends ZkpcActiveRecord
 			'content' => 'Content',
 			'state' => 'State',
 			'replies_count' => 'Replies Count',
+            'love_count' => 'Love count',
 			'last_reply_user_id' => 'Last Reply User',
 			'replied_at' => 'Replied At',
 			'source' => 'Source',
@@ -110,6 +112,7 @@ class Topic extends ZkpcActiveRecord
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('state',$this->state);
 		$criteria->compare('replies_count',$this->replies_count);
+        $criteria->compare('love_count', $this->love_count);
 		$criteria->compare('last_reply_user_id',$this->last_reply_user_id);
 		$criteria->compare('replied_at',$this->replied_at,true);
 		$criteria->compare('source',$this->source,true);
