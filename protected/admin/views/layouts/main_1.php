@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/login_form.css" />
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<title><?php echo '后台管理系统'; ?></title>
 </head>
 
 <body>

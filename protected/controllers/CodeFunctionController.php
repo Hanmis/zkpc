@@ -365,8 +365,8 @@ class CodeFunctionController extends Controller
 //            var_dump($model->attributes);exit;
             if ($model->save()) {
                 //更新评论数
-                $comment = CodeComment::model()->findByPk($_POST['cfr_id']);
-                $comment->comments_count = $comment->comments_count + 1;
+                $comment = CodeFragment::model()->findByPk($_POST['cfr_id']);
+                $comment->comments_count += 1;
                 $comment->update();
                 $this->redirect(Yii::app()->request->urlReferrer);
             } else {

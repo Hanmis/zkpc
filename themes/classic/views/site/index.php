@@ -11,7 +11,7 @@
                     <a href="#" class="img_a">
                         <img class="uface" style="width:16px;height:16px;" src="<?php echo User::get_gravatar($hot_topics[$i]['email'], 16)?>">
                     </a>
-                    <a href="<?php echo Yii::app()->createUrl('topic/view', array('tid'=>$hot_topics[$i]['tid']));?>"><?php  echo $hot_topics[$i]['title']?></a>
+                    <a href="<?php echo Yii::app()->createUrl('topic/view', array('tid'=>$hot_topics[$i]['tid']));?>"><?php  echo mb_substr($hot_topics[$i]['title'],0,35,'utf-8');?></a>
                     <span class="count"><?php echo $hot_topics[$i]['replies_count']?> 回复</span>
                 </li>
                 <?php endfor;?>
@@ -27,7 +27,7 @@
                     <a href="/fredwu" class="img_a">
                         <img class="uface" style="width:16px;height:16px;" src="<?php echo User::get_gravatar($love_topics[$i]['email'], 16)?>">
                     </a>
-                    <a href="<?php echo Yii::app()->createUrl('topic/view', array('tid'=>$love_topics[$i]['tid']));?>"><?php  echo $love_topics[$i]['title']?></a>
+                    <a href="<?php echo Yii::app()->createUrl('topic/view', array('tid'=>$love_topics[$i]['tid']));?>"><?php  echo mb_substr($love_topics[$i]['title'],0,30,'utf-8');?></a>
                     <span class="count"><?php echo $love_topics[$i]['love_count']?> 人喜欢</span>
                 </li>
                 <?php endfor;?>

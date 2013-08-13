@@ -91,7 +91,7 @@ class CoolsiteController extends Controller
                 else
                     $model->favicon = $model->url.'/favicon.ico';
             }
-            var_dump($model->attributes);exit;
+//            var_dump($model->attributes);exit;
 			if($model->save())
 				$this->redirect(Yii::app()->createUrl('Coolsite/index'));
 		}

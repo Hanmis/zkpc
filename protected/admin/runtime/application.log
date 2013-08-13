@@ -1201,3 +1201,124 @@ Stack trace:
 #19 D:\wamp\web2\zkpc\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #20 D:\wamp\web2\zkpc\zkpc-admin.php(19): CWebApplication->run()
 REQUEST_URI=/zkpc/zkpc-admin.php
+2013/05/08 19:59:42 [error] [exception.CException] exception 'CException' with message 'CCaptchaValidator.action "captcha" 是无效的. 无法在目前的控制器中找到此一动作.' in D:\wamp\web2\zkpc\framework\validators\CCaptchaValidator.php:75
+Stack trace:
+#0 D:\wamp\web2\zkpc\framework\validators\CCaptchaValidator.php(49): CCaptchaValidator->getCaptchaAction()
+#1 D:\wamp\web2\zkpc\framework\validators\CValidator.php(213): CCaptchaValidator->validateAttribute(Object(User), 'verifyCode')
+#2 D:\wamp\web2\zkpc\framework\base\CModel.php(159): CValidator->validate(Object(User), NULL)
+#3 D:\wamp\web2\zkpc\framework\db\ar\CActiveRecord.php(794): CModel->validate(NULL)
+#4 D:\wamp\web2\zkpc\protected\admin\controllers\UserController.php(88): CActiveRecord->save()
+#5 [internal function]: UserController->actionUpdate('2')
+#6 D:\wamp\web2\zkpc\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#7 D:\wamp\web2\zkpc\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#8 D:\wamp\web2\zkpc\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\zkpc\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\zkpc\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\wamp\web2\zkpc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\zkpc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\zkpc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\zkpc\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\wamp\web2\zkpc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\zkpc\framework\web\CWebApplication.php(282): CController->run('update')
+#17 D:\wamp\web2\zkpc\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#18 D:\wamp\web2\zkpc\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\zkpc-admin.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/zkpc-admin.php?r=user/update&id=2
+HTTP_REFERER=http://localhost:81/zkpc/zkpc-admin.php?r=user/update&id=2
+---
+2013/05/08 20:00:12 [error] [exception.CException] exception 'CException' with message 'CCaptchaValidator.action "captcha" 是无效的. 无法在目前的控制器中找到此一动作.' in D:\wamp\web2\zkpc\framework\validators\CCaptchaValidator.php:75
+Stack trace:
+#0 D:\wamp\web2\zkpc\framework\validators\CCaptchaValidator.php(49): CCaptchaValidator->getCaptchaAction()
+#1 D:\wamp\web2\zkpc\framework\validators\CValidator.php(213): CCaptchaValidator->validateAttribute(Object(User), 'verifyCode')
+#2 D:\wamp\web2\zkpc\framework\base\CModel.php(159): CValidator->validate(Object(User), NULL)
+#3 D:\wamp\web2\zkpc\framework\db\ar\CActiveRecord.php(794): CModel->validate(NULL)
+#4 D:\wamp\web2\zkpc\protected\admin\controllers\UserController.php(88): CActiveRecord->save()
+#5 [internal function]: UserController->actionUpdate('2')
+#6 D:\wamp\web2\zkpc\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#7 D:\wamp\web2\zkpc\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#8 D:\wamp\web2\zkpc\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\zkpc\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\zkpc\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\wamp\web2\zkpc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\zkpc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\zkpc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\zkpc\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\wamp\web2\zkpc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\zkpc\framework\web\CWebApplication.php(282): CController->run('update')
+#17 D:\wamp\web2\zkpc\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#18 D:\wamp\web2\zkpc\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\zkpc-admin.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/zkpc-admin.php?r=user/update&id=2
+HTTP_REFERER=http://localhost:81/zkpc/zkpc-admin.php?r=user/update&id=2
+---
+2013/05/08 20:02:10 [error] [exception.CException] exception 'CException' with message 'CCaptchaValidator.action "captcha" 是无效的. 无法在目前的控制器中找到此一动作.' in D:\wamp\web2\zkpc\framework\validators\CCaptchaValidator.php:75
+Stack trace:
+#0 D:\wamp\web2\zkpc\framework\validators\CCaptchaValidator.php(49): CCaptchaValidator->getCaptchaAction()
+#1 D:\wamp\web2\zkpc\framework\validators\CValidator.php(213): CCaptchaValidator->validateAttribute(Object(User), 'verifyCode')
+#2 D:\wamp\web2\zkpc\framework\base\CModel.php(159): CValidator->validate(Object(User), NULL)
+#3 D:\wamp\web2\zkpc\framework\db\ar\CActiveRecord.php(794): CModel->validate(NULL)
+#4 D:\wamp\web2\zkpc\protected\admin\controllers\UserController.php(88): CActiveRecord->save()
+#5 [internal function]: UserController->actionUpdate('2')
+#6 D:\wamp\web2\zkpc\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#7 D:\wamp\web2\zkpc\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#8 D:\wamp\web2\zkpc\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\zkpc\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\zkpc\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\wamp\web2\zkpc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\zkpc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\zkpc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\zkpc\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\wamp\web2\zkpc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\zkpc\framework\web\CWebApplication.php(282): CController->run('update')
+#17 D:\wamp\web2\zkpc\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#18 D:\wamp\web2\zkpc\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\zkpc-admin.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/zkpc-admin.php?r=user/update&id=2
+HTTP_REFERER=http://localhost:81/zkpc/zkpc-admin.php?r=user/update&id=2
+---
+2013/05/08 20:05:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您未被授权执行这个动作' in D:\wamp\web2\zkpc\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 D:\wamp\web2\zkpc\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), '???????????????...')
+#1 D:\wamp\web2\zkpc\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\wamp\web2\zkpc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 D:\wamp\web2\zkpc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\wamp\web2\zkpc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\wamp\web2\zkpc\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\wamp\web2\zkpc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\web2\zkpc\framework\web\CWebApplication.php(282): CController->run('index')
+#8 D:\wamp\web2\zkpc\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#9 D:\wamp\web2\zkpc\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\wamp\web2\zkpc\zkpc-admin.php(19): CApplication->run()
+#11 {main}
+REQUEST_URI=/zkpc/zkpc-admin.php
+HTTP_REFERER=http://localhost:81/zkpc/zkpc-admin.php?r=site/login
+---
+2013/05/08 20:06:47 [error] [exception.CException] exception 'CException' with message 'CCaptchaValidator.action "captcha" 是无效的. 无法在目前的控制器中找到此一动作.' in D:\wamp\web2\zkpc\framework\validators\CCaptchaValidator.php:75
+Stack trace:
+#0 D:\wamp\web2\zkpc\framework\validators\CCaptchaValidator.php(49): CCaptchaValidator->getCaptchaAction()
+#1 D:\wamp\web2\zkpc\framework\validators\CValidator.php(213): CCaptchaValidator->validateAttribute(Object(User), 'verifyCode')
+#2 D:\wamp\web2\zkpc\framework\base\CModel.php(159): CValidator->validate(Object(User), NULL)
+#3 D:\wamp\web2\zkpc\framework\db\ar\CActiveRecord.php(794): CModel->validate(NULL)
+#4 D:\wamp\web2\zkpc\protected\admin\controllers\UserController.php(88): CActiveRecord->save()
+#5 [internal function]: UserController->actionUpdate('2')
+#6 D:\wamp\web2\zkpc\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#7 D:\wamp\web2\zkpc\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#8 D:\wamp\web2\zkpc\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\web2\zkpc\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\web2\zkpc\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\wamp\web2\zkpc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 D:\wamp\web2\zkpc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\wamp\web2\zkpc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\wamp\web2\zkpc\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\wamp\web2\zkpc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\web2\zkpc\framework\web\CWebApplication.php(282): CController->run('update')
+#17 D:\wamp\web2\zkpc\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#18 D:\wamp\web2\zkpc\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 D:\wamp\web2\zkpc\zkpc-admin.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/zkpc/zkpc-admin.php?r=user/update&id=2
+HTTP_REFERER=http://localhost:81/zkpc/zkpc-admin.php?r=user/update&id=2
+---

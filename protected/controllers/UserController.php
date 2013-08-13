@@ -170,7 +170,7 @@ class UserController extends Controller
 				           " 你使用了本站提供的密码找回功能，如果你确认此密码找回功能是你启用的，".
 	                        "请点击下面的链接，按流程进行密码重设。<br/><br/>欢迎你经常访问本站。".
 	                        "站长无喱头谢谢你经常光顾本站！".
-	                        "<br><Br><a href=".$url.">确认密码找回</a>";
+	                        "<br/>通过以下链重设密码<br/>localhost:81{$url}";
 				$mail = Yii::app()->mailer;
 				$mail->Host = 'smtp.qq.com';
 				$mail->CharSet = "UTF-8";
